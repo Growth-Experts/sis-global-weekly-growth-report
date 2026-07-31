@@ -831,32 +831,6 @@
       font-weight: 600;
     }
 
-    /* Mobile: scale the fixed 960×540 slides to fit the viewport.
-       Design and layout stay identical — no reflow. */
-    @media screen and (max-width: 1008px) {
-      html, body {
-        overflow-x: hidden;
-      }
-
-      .deck {
-        width: 100%;
-        padding: 16px 0 48px;
-        gap: 0;
-      }
-
-      .deck-label {
-        margin: 18px 0 8px;
-        text-align: center;
-      }
-
-      .page {
-        --deck-scale: calc((100vw - 16px) / var(--page-w));
-        transform: scale(var(--deck-scale));
-        transform-origin: top center;
-        margin-bottom: calc(var(--page-h) * (var(--deck-scale) - 1) + 16px);
-      }
-    }
-
     /* ═══════════════ 4. OUTBOUND (purple) ═══════════════ */
     .page--outbound {
       background: var(--sis-primary);
@@ -1133,6 +1107,41 @@
       text-transform: uppercase;
       color: #9a9aa8;
       margin-bottom: -16px;
+    }
+
+    /* Mobile: scale the fixed 960×540 slides to fit the viewport.
+       Design and layout stay identical — no reflow.
+       Must follow .deck-label so mobile margins win over the desktop pull-up. */
+    @media screen and (max-width: 1008px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
+      .deck {
+        width: 100%;
+        padding: 16px 0 48px;
+        gap: 0;
+      }
+
+      .deck-label {
+        width: auto;
+        max-width: 100%;
+        margin: 20px 0 10px;
+        padding: 0 12px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .page {
+        --deck-scale: calc((100vw - 16px) / var(--page-w));
+        transform: scale(var(--deck-scale));
+        transform-origin: top center;
+        /* Collapse unused layout height under the scaled visual, keep a gap */
+        margin-bottom: calc(var(--page-h) * (var(--deck-scale) - 1) + 8px);
+        position: relative;
+        z-index: 1;
+      }
     }
 
     @media print {
