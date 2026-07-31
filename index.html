@@ -831,24 +831,29 @@
       font-weight: 600;
     }
 
-    @media screen and (max-width: 720px) {
-      .pipeline-row {
-        flex-direction: column;
-        gap: 10px;
+    /* Mobile: scale the fixed 960×540 slides to fit the viewport.
+       Design and layout stay identical — no reflow. */
+    @media screen and (max-width: 1008px) {
+      html, body {
+        overflow-x: hidden;
       }
 
-      .pipeline-arrow {
+      .deck {
         width: 100%;
-        height: 18px;
-        transform: rotate(90deg);
+        padding: 16px 0 48px;
+        gap: 0;
       }
 
-      .crm-split {
-        grid-template-columns: 1fr;
+      .deck-label {
+        margin: 18px 0 8px;
+        text-align: center;
       }
 
-      .universe-grid {
-        grid-template-columns: 1fr 1fr;
+      .page {
+        --deck-scale: calc((100vw - 16px) / var(--page-w));
+        transform: scale(var(--deck-scale));
+        transform-origin: top center;
+        margin-bottom: calc(var(--page-h) * (var(--deck-scale) - 1) + 16px);
       }
     }
 
@@ -1131,12 +1136,14 @@
     }
 
     @media print {
-      body { background: white; }
-      .deck { padding: 0; gap: 0; }
+      body { background: white; overflow: visible; }
+      .deck { padding: 0; gap: 0; width: auto; }
       .deck-label { display: none; }
       .page {
         box-shadow: none;
         border-radius: 0;
+        transform: none;
+        margin-bottom: 0;
         page-break-after: always;
         break-after: page;
       }
