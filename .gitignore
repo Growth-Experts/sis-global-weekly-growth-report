@@ -1,0 +1,8 @@
+.DS_Store
+.preview/
+references/
+node_modules/
+.railway/
+*.log
+.env
+.env.*
