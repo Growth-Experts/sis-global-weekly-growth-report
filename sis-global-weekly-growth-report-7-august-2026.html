@@ -14,7 +14,8 @@
 
     Section rhythm:
       01 Cover → 02 Performance → 03 By campaign → 04 CRM
-      → 05 Apollo universe → 06 Outbound → 07 Priorities → 08 Close
+      → 05 CRM breakdown → 06 Apollo universe → 07 Outbound
+      → 08 Priorities → 09 Close
 
     Brand tokens:
       Primary #1e508a · Secondaries #447fb3, #55a8c4, #584eaa (trims only)
@@ -726,6 +727,156 @@
       background: var(--sis-white);
     }
 
+    .crm-breakdown-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      background: var(--sis-light);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .crm-breakdown-intro p {
+      font-size: 12.5px;
+      color: var(--sis-text);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .crm-breakdown-intro strong {
+      color: var(--sis-primary);
+    }
+
+    .crm-breakdown-total {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .crm-breakdown-total .v {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--sis-primary);
+      line-height: 1;
+    }
+
+    .crm-breakdown-total .l {
+      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+    }
+
+    .import-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .import-table th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+      padding: 0 12px 6px 0;
+      border-bottom: 1px solid var(--sis-border);
+    }
+
+    .import-table th:last-child,
+    .import-table td:last-child {
+      text-align: right;
+      padding-right: 4px;
+      width: 72px;
+    }
+
+    .import-table td {
+      padding: 8px 12px 8px 0;
+      border-bottom: 1px solid var(--sis-border);
+      vertical-align: middle;
+    }
+
+    .import-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .import-table .import-file {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--sis-text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .import-table .import-seg {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sis-text);
+    }
+
+    .import-table .import-seg span {
+      font-weight: 500;
+      color: var(--sis-muted);
+    }
+
+    .import-table .import-count {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--sis-primary);
+    }
+
+    .import-table tr.is-week td {
+      background: rgba(30, 80, 138, 0.04);
+    }
+
+    .import-table tr.is-week .import-file::after {
+      content: " · this week";
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--sis-secondary-2);
+    }
+
+    .region-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: auto;
+      flex-shrink: 0;
+    }
+
+    .region-item {
+      background: var(--sis-white);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+    }
+
+    .region-item .l {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+    }
+
+    .region-item .v {
+      margin-top: 3px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--sis-text);
+    }
+
     .universe-intro {
       margin-bottom: 14px;
     }
@@ -1250,7 +1401,7 @@
           <article class="highlight">
             <div class="num">02</div>
             <h3>CRM and data progress</h3>
-            <p>+200 contacts enriched; +150 uploaded to D365 · 2 segments live.</p>
+            <p>+200 contacts enriched; +159 uploaded to D365 · 2 segments live.</p>
           </article>
           <article class="highlight">
             <div class="num">03</div>
@@ -1482,9 +1633,9 @@
           </div>
           <div class="pipeline-arrow" aria-hidden="true">→</div>
           <div class="metric-card">
-            <div class="value">637</div>
+            <div class="value">633</div>
             <div class="title">Uploaded to Dynamics 365</div>
-            <div class="hint"><em>+150 this week</em> · CRM-ready contacts</div>
+            <div class="hint"><em>+159 this week</em> · CRM-ready contacts</div>
           </div>
           <div class="pipeline-arrow" aria-hidden="true">→</div>
           <div class="metric-card">
@@ -1558,9 +1709,97 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
-         05. APOLLO PROSPECT UNIVERSE
+         05. CRM UPLOAD BREAKDOWN
+         Weekly HE imports that make up the Dynamics 365 total
          ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">05 · Apollo prospect universe</div>
+    <div class="deck-label">05 · CRM upload breakdown</div>
+    <section class="page page--crm" aria-label="CRM upload breakdown">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">Pipeline</p>
+            <h2>Who was uploaded to Dynamics</h2>
+          </div>
+          <div class="meta">
+            Higher Education contacts
+            <span class="meta-date">17 Jul – 7 Aug 2026</span>
+          </div>
+        </div>
+
+        <div class="crm-breakdown-intro">
+          <p>
+            All <strong>633</strong> CRM-ready contacts uploaded to Dynamics 365 are
+            <strong>Higher Education</strong> contacts, imported across four weekly batches.
+          </p>
+          <div class="crm-breakdown-total">
+            <div class="v">633</div>
+            <div class="l">Total uploaded</div>
+          </div>
+        </div>
+
+        <table class="import-table">
+          <thead>
+            <tr>
+              <th>Weekly import</th>
+              <th>Segment</th>
+              <th>Contacts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="import-file">17-july-2026-he-global</td>
+              <td class="import-seg">HE Global</td>
+              <td class="import-count">67</td>
+            </tr>
+            <tr>
+              <td class="import-file">24-july-2026-he-sa</td>
+              <td class="import-seg">HE South Africa</td>
+              <td class="import-count">145</td>
+            </tr>
+            <tr>
+              <td class="import-file">31-july-2026-he-global</td>
+              <td class="import-seg">HE Global</td>
+              <td class="import-count">262</td>
+            </tr>
+            <tr class="is-week">
+              <td class="import-file">7-august-2026-he-us</td>
+              <td class="import-seg">HE (EDUCAUSE) <span>32</span> · HE US <span>127</span></td>
+              <td class="import-count">159</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="region-strip">
+          <div class="region-item">
+            <div class="l">HE Global</div>
+            <div class="v">329</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE South Africa</div>
+            <div class="v">145</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE EDUCAUSE</div>
+            <div class="v">32</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE US</div>
+            <div class="v">127</div>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Dynamics 365 weekly imports · +159 this week</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         06. APOLLO PROSPECT UNIVERSE
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">06 · Apollo prospect universe</div>
     <section class="page page--crm" aria-label="Apollo prospect universe">
 
       <div class="page-inner">
@@ -1658,7 +1897,7 @@
          4. NEXT STEP: OUTBOUND OUTREACH
          Edit: architecture labels, three points, setup priorities
          ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">06 · Outbound</div>
+    <div class="deck-label">07 · Outbound</div>
     <section class="page page--outbound" aria-label="Next step outbound outreach">
 
       <div class="page-inner">
@@ -1734,7 +1973,7 @@
          5. PRIORITIES FOR NEXT WEEK
          Edit: four numbered actions
          ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">07 · Priorities</div>
+    <div class="deck-label">08 · Priorities</div>
     <section class="page" aria-label="Priorities for next week">
       <div class="page-inner">
         <div class="section-head">
@@ -1789,7 +2028,7 @@
     <!-- ═══════════════════════════════════════════════════════════
          06 · CLOSE
          ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">08 · Close</div>
+    <div class="deck-label">09 · Close</div>
     <section class="page page--close" aria-label="Report close">
       <div class="brand-shape brand-shape--close" aria-hidden="true"></div>
 
@@ -1814,7 +2053,7 @@
           <article class="close-card">
             <div class="num">02</div>
             <h3>CRM pipeline ready</h3>
-            <p>+200 enriched, +150 uploaded to D365 · 2 segments live, 2 Smartlead campaigns launching.</p>
+            <p>+200 enriched, +159 uploaded to D365 · 2 segments live, 2 Smartlead campaigns launching.</p>
           </article>
           <article class="close-card">
             <div class="num">03</div>
