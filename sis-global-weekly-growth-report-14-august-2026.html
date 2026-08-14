@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIS Global Weekly Growth Report — Week 6 · August 2026</title>
+  <!--
+    SIS GLOBAL — WEEKLY GROWTH REPORT MASTER TEMPLATE
+    ==================================================
+    Landscape pages at 960×540 (matches the July reference deck).
+
+    v2 — Updated SIS Global brand (July 2026 website refresh).
+    Duplicate of the original master; original file preserved.
+
+    Section rhythm:
+      01 Cover → 02 Performance → 03 By campaign → 04 CRM
+      → 05 CRM breakdown → 06 Apollo universe → 07 Outbound
+      → 08 Priorities → 09 Close
+
+    Brand tokens:
+      Primary #1e508a · Secondaries #447fb3, #55a8c4, #584eaa (trims only)
+      Shape: assets/sis-global-logo-white-shape.svg (cover + close only)
+
+    Print to PDF: File → Print → Save as PDF (page size 960×540).
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sis-primary: #1e508a;
+      --sis-secondary-1: #447fb3;
+      --sis-secondary-2: #55a8c4;
+      --sis-secondary-3: #584eaa;
+      /* Legacy aliases remapped to new brand (structure unchanged) */
+      --sis-purple: #1e508a;
+      --sis-purple-dark: #1e508a;
+      --sis-blue: #447fb3;
+      --sis-green: #55a8c4;
+      --sis-green-dark: #447fb3;
+      --sis-text: #202124;
+      --sis-muted: #5f6b7a;
+      --sis-light: #f4f7fa;
+      --sis-border: #d7dee8;
+      --sis-white: #ffffff;
+      --sis-footer: #1e508a;
+      --sis-gradient: linear-gradient(135deg, #1e508a 0%, #244f8f 55%, #1a4578 100%);
+      --page-w: 960px;
+      --page-h: 540px;
+      --radius: 16px;
+      --radius-sm: 12px;
+      --font: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--sis-text);
+      background: #e8eef4;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.45;
+    }
+
+    .deck {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding: 36px 24px 64px;
+    }
+
+    /* ── Page shell (matches reference 960×540 landscape) ── */
+    .page {
+      position: relative;
+      width: var(--page-w);
+      height: var(--page-h);
+      overflow: hidden;
+      background: var(--sis-white);
+      border-radius: 4px;
+      box-shadow: 0 12px 40px rgba(32, 33, 36, 0.12);
+    }
+
+    .page-inner {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 32px 44px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Decorative shape — cover + close only */
+    .brand-shape {
+      position: absolute;
+      top: 0;
+      height: var(--page-h);
+      width: calc(var(--page-h) / 2);
+      background-image: url("assets/sis-global-logo-white-shape.svg");
+      background-repeat: no-repeat;
+      background-size: var(--page-h) var(--page-h);
+      opacity: 0.1;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+
+    /* Full-height mark, left half visible on the right edge */
+    .brand-shape--cover {
+      right: 0;
+      background-position: left center;
+    }
+
+    /* Full-height mark, right half visible on the left edge */
+    .brand-shape--close {
+      left: 0;
+      background-position: right center;
+    }
+
+    /* Typography */
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sis-green);
+    }
+
+    .eyebrow--purple { color: var(--sis-purple); }
+    .eyebrow--muted { color: var(--sis-muted); }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 750;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--sis-text);
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .lede {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 420px;
+      line-height: 1.5;
+    }
+
+    .body-copy {
+      font-size: 13.5px;
+      color: var(--sis-muted);
+      line-height: 1.55;
+    }
+
+    .rule {
+      height: 2px;
+      width: 48px;
+      background: var(--sis-green);
+      border-radius: 2px;
+      margin: 14px 0 18px;
+    }
+
+    .rule--purple {
+      background: linear-gradient(90deg, var(--sis-purple), var(--sis-blue));
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--sis-border);
+    }
+
+    .section-head .meta {
+      text-align: right;
+      font-size: 12px;
+      color: var(--sis-muted);
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .section-head .meta .meta-date {
+      display: block;
+      margin-top: 2px;
+      color: var(--sis-text);
+      font-weight: 600;
+    }
+
+    .page-footer-bar {
+      margin-top: auto;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: var(--sis-muted);
+      line-height: 1.4;
+    }
+
+    .page-footer-bar strong { color: var(--sis-text); font-weight: 600; }
+
+    /* ═══════════════ 1. COVER ═══════════════ */
+    .page--cover {
+      background: var(--sis-gradient);
+      color: var(--sis-white);
+    }
+
+    .page--cover .page-inner { padding: 40px 48px 36px; }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .cover-logo {
+      height: 36px;
+      width: auto;
+    }
+
+    .cover-week {
+      text-align: right;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .cover-week strong {
+      display: block;
+      font-size: 14px;
+      color: var(--sis-green);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-top: 2px;
+    }
+
+    .cover-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 0 12px;
+      max-width: 560px;
+    }
+
+    .cover-main h1 {
+      color: var(--sis-white);
+      margin-top: 10px;
+    }
+
+    .cover-main h1 span {
+      color: var(--sis-green);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .highlight {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      backdrop-filter: blur(6px);
+    }
+
+    .highlight .num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sis-green);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .highlight h3 {
+      color: var(--sis-white);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .highlight p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.45;
+    }
+
+    .cover-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: auto;
+    }
+
+    /* ═══════════════ 2. PERFORMANCE ═══════════════ */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .metric-card {
+      background: var(--sis-light);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--sis-secondary-1);
+    }
+
+    .metrics .metric-card:nth-child(1)::before { background: var(--sis-secondary-1); }
+    .metrics .metric-card:nth-child(2)::before { background: var(--sis-secondary-2); }
+    .metrics .metric-card:nth-child(3)::before { background: var(--sis-secondary-3); }
+    .metrics .metric-card:nth-child(4)::before { background: var(--sis-primary); }
+
+    .pipeline-row .metric-card:nth-child(1)::before { background: var(--sis-secondary-1); }
+    .pipeline-row .metric-card:nth-child(3)::before { background: var(--sis-secondary-2); }
+    .pipeline-row .metric-card:nth-child(5)::before { background: var(--sis-secondary-3); }
+    .pipeline-row .metric-card:nth-child(7)::before { background: var(--sis-primary); }
+
+    .metric-card .label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--sis-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .metric-card .value {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--sis-text);
+      line-height: 1;
+    }
+
+    .metric-card .value .unit {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--sis-purple);
+    }
+
+    .metric-card .hint {
+      margin-top: 6px;
+      font-size: 11.5px;
+      color: var(--sis-muted);
+    }
+
+    .metric-card .hint em {
+      font-style: normal;
+      color: var(--sis-green-dark);
+      font-weight: 600;
+    }
+
+    .metric-card .title {
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--sis-text);
+      line-height: 1.3;
+    }
+
+    .perf-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .panel {
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      background: var(--sis-white);
+    }
+
+    .panel--callout {
+      background: linear-gradient(160deg, #f3f7fb 0%, #eef5f8 100%);
+      border-color: #d0dce8;
+    }
+
+    .panel .panel-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sis-purple);
+      margin-bottom: 8px;
+    }
+
+    .panel p {
+      font-size: 13.5px;
+      color: var(--sis-text);
+      line-height: 1.55;
+    }
+
+    .panel--callout p { color: #2a2b32; }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .campaign-card {
+      border: 1px solid var(--sis-border);
+      border-top: 4px solid var(--sis-secondary-1);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 16px;
+      background: var(--sis-white);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .campaign-grid .campaign-card:nth-child(1) { border-top-color: var(--sis-secondary-1); }
+    .campaign-grid .campaign-card:nth-child(2) { border-top-color: var(--sis-secondary-2); }
+    .campaign-grid .campaign-card:nth-child(3) { border-top-color: var(--sis-secondary-3); }
+
+    .campaign-card .camp-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--sis-text);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .campaign-card .camp-id {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--sis-muted);
+      margin-top: 3px;
+    }
+
+    .camp-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .camp-stat {
+      background: var(--sis-light);
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .camp-stat .v {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sis-purple-dark);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .camp-stat .l {
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--sis-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .camp-foot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--sis-muted);
+      padding-top: 8px;
+      margin-top: 2px;
+      border-top: 1px solid var(--sis-border);
+    }
+
+    .camp-foot strong {
+      color: var(--sis-text);
+      font-weight: 600;
+    }
+
+    .health-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      flex: 1;
+    }
+
+    .health-item {
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px 14px;
+      background: var(--sis-light);
+    }
+
+    .health-item .l {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+      margin-bottom: 6px;
+    }
+
+    .health-item .v {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sis-text);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .health-item .s {
+      margin-top: 5px;
+      font-size: 11.5px;
+      color: var(--sis-muted);
+    }
+
+    .health-item .v.good { color: var(--sis-green-dark); }
+
+    /* ═══════════════ 3. CRM ═══════════════ */
+    .page--crm {
+      background: var(--sis-white);
+    }
+
+    .pipeline-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .pipeline-row .metric-card {
+      flex: 1;
+      background: var(--sis-white);
+      min-width: 0;
+      padding: 12px 14px 12px;
+    }
+
+    .pipeline-row .metric-card .value {
+      font-size: 28px;
+    }
+
+    .pipeline-row .metric-card .title {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .pipeline-row .metric-card .hint {
+      margin-top: 4px;
+      font-size: 11px;
+    }
+
+    .pipeline-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      flex-shrink: 0;
+      color: var(--sis-purple);
+      font-size: 16px;
+      font-weight: 700;
+      opacity: 0.45;
+    }
+
+    .crm-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .crm-card {
+      background: var(--sis-white);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .crm-card .card-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sis-purple);
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .process-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--sis-primary);
+      color: var(--sis-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .process-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .process-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sis-text);
+    }
+
+    .process-connector {
+      width: 24px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sis-green);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .process-note {
+      font-size: 11.5px;
+      color: var(--sis-muted);
+      line-height: 1.45;
+      margin-top: 0;
+      padding-top: 10px;
+      border-top: 1px solid var(--sis-border);
+      flex-shrink: 0;
+    }
+
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--sis-text);
+      line-height: 1.35;
+    }
+
+    .check {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(40, 209, 174, 0.15);
+      color: var(--sis-green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    .page--crm .page-footer-bar {
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      background: var(--sis-white);
+    }
+
+    .crm-breakdown-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      background: var(--sis-light);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .crm-breakdown-intro p {
+      font-size: 12.5px;
+      color: var(--sis-text);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .crm-breakdown-intro strong {
+      color: var(--sis-primary);
+    }
+
+    .crm-breakdown-total {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .crm-breakdown-total .v {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--sis-primary);
+      line-height: 1;
+    }
+
+    .crm-breakdown-total .l {
+      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+    }
+
+    .import-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .import-table th {
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+      padding: 0 12px 6px 0;
+      border-bottom: 1px solid var(--sis-border);
+    }
+
+    .import-table th:last-child,
+    .import-table td:last-child {
+      text-align: right;
+      padding-right: 4px;
+      width: 72px;
+    }
+
+    .import-table td {
+      padding: 6px 12px 6px 0;
+      border-bottom: 1px solid var(--sis-border);
+      vertical-align: middle;
+    }
+
+    .import-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .import-table .import-file {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--sis-text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .import-table .import-seg {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sis-text);
+    }
+
+    .import-table .import-seg span {
+      font-weight: 500;
+      color: var(--sis-muted);
+    }
+
+    .import-table .import-count {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--sis-primary);
+    }
+
+    .import-table tr.is-week td {
+      background: rgba(30, 80, 138, 0.04);
+    }
+
+    .import-table tr.is-week .import-file::after {
+      content: " · this week";
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--sis-secondary-2);
+    }
+
+    .region-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: auto;
+      flex-shrink: 0;
+    }
+
+    .region-item {
+      background: var(--sis-white);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+    }
+
+    .region-item .l {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sis-muted);
+    }
+
+    .region-item .v {
+      margin-top: 3px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--sis-text);
+    }
+
+    .universe-intro {
+      margin-bottom: 14px;
+    }
+
+    .universe-intro h3 {
+      font-size: 18px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      color: var(--sis-text);
+      margin-bottom: 4px;
+    }
+
+    .universe-intro p {
+      font-size: 12.5px;
+      color: var(--sis-muted);
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .universe-card {
+      background: var(--sis-white);
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 12px 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .universe-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--sis-secondary-1);
+    }
+
+    .universe-grid .universe-card:nth-child(1)::before { background: var(--sis-primary); }
+    .universe-grid .universe-card:nth-child(2)::before { background: var(--sis-secondary-1); }
+    .universe-grid .universe-card:nth-child(3)::before { background: var(--sis-secondary-2); }
+    .universe-grid .universe-card:nth-child(4)::before { background: var(--sis-secondary-3); }
+    .universe-grid .universe-card:nth-child(5)::before { background: var(--sis-secondary-1); }
+
+    .universe-card .sol {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sis-text);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      min-height: 28px;
+    }
+
+    .universe-card .total {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--sis-purple-dark);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .universe-card .countries {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .universe-card .countries li {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      font-size: 10.5px;
+      color: var(--sis-muted);
+      line-height: 1.35;
+    }
+
+    .universe-card .countries li strong {
+      color: var(--sis-text);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .disclaimer {
+      background: var(--sis-light);
+      border: 1px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 11px;
+      color: var(--sis-muted);
+      line-height: 1.45;
+    }
+
+    .disclaimer strong {
+      color: var(--sis-text);
+      font-weight: 600;
+    }
+
+    /* ═══════════════ 4. OUTBOUND (purple) ═══════════════ */
+    .page--outbound {
+      background: var(--sis-primary);
+      background-image: linear-gradient(145deg, #1e508a 0%, #244f8f 50%, #1a4578 100%);
+      color: var(--sis-white);
+    }
+
+    .page--outbound h2 {
+      color: var(--sis-white);
+    }
+
+    .page--outbound .section-head {
+      border-bottom-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .page--outbound .section-head .meta { color: rgba(255, 255, 255, 0.55); }
+    .page--outbound .section-head .meta .meta-date { color: rgba(255, 255, 255, 0.85); }
+
+    .flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin: 4px 0 14px;
+    }
+
+    .flow-step {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-sm);
+      padding: 14px 14px 12px;
+      text-align: center;
+    }
+
+    .flow-step .tool {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sis-white);
+      margin-bottom: 4px;
+    }
+
+    .flow-step .role {
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.35;
+    }
+
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      flex-shrink: 0;
+      color: var(--sis-green);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .outbound-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .outbound-points li {
+      list-style: none;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.88);
+      padding: 12px 14px;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      border-top: 3px solid var(--sis-secondary-1);
+    }
+
+    .outbound-points li:nth-child(1) { border-top-color: var(--sis-secondary-1); }
+    .outbound-points li:nth-child(2) { border-top-color: var(--sis-secondary-2); }
+    .outbound-points li:nth-child(3) { border-top-color: var(--sis-secondary-3); }
+
+    .setup-block {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px 16px;
+    }
+
+    .setup-block h3 {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .setup-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 28px;
+      list-style: none;
+    }
+
+    .setup-list li {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.9);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .setup-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sis-green);
+    }
+
+    .domain-block {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .domain-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 15px;
+    }
+
+    .domain-card h3 {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .domain-card p {
+      font-size: 12px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 8px;
+    }
+
+    .domain-card p:last-child { margin-bottom: 0; }
+
+    .domain-card .domains {
+      font-weight: 700;
+      color: var(--sis-white);
+    }
+
+    .domain-card--note {
+      background: rgba(0, 0, 0, 0.18);
+      border-color: rgba(255, 255, 255, 0.18);
+      border-top: 3px solid var(--sis-secondary-2);
+    }
+
+    .domain-card--note h3 {
+      color: var(--sis-secondary-2);
+    }
+
+    .page--outbound .page-footer-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .page--outbound .page-footer-bar strong { color: rgba(255, 255, 255, 0.75); }
+
+    /* ═══════════════ 5. PRIORITIES ═══════════════ */
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .action {
+      border: 1px solid var(--sis-border);
+      border-radius: var(--radius);
+      padding: 22px 24px 20px;
+      background: var(--sis-white);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .action .n {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--sis-green);
+      line-height: 1;
+      min-width: 42px;
+    }
+
+    .action h3 {
+      font-size: 15.5px;
+      margin-bottom: 6px;
+      color: var(--sis-text);
+    }
+
+    .action p {
+      font-size: 12.5px;
+      color: var(--sis-muted);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════ CLOSE ═══════════════ */
+    .page--close {
+      background: var(--sis-gradient);
+      color: var(--sis-white);
+    }
+
+    .page--close .section-head {
+      border-bottom-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .page--close .section-head h2 {
+      color: var(--sis-white);
+    }
+
+    .page--close .section-head .meta {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .page--close .section-head .meta .meta-date {
+      color: var(--sis-green);
+    }
+
+    .close-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .close-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-sm);
+      padding: 16px 16px 14px;
+    }
+
+    .close-card .num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sis-green);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .close-card h3 {
+      color: var(--sis-white);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .close-card p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.45;
+    }
+
+    .close-next {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin-bottom: 4px;
+    }
+
+    .close-next .label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sis-green);
+      margin-bottom: 4px;
+    }
+
+    .close-next .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sis-white);
+    }
+
+    .close-next .detail {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: right;
+      line-height: 1.4;
+    }
+
+    .page--close .page-footer-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.5);
+      flex-shrink: 0;
+    }
+
+    .page--close .page-footer-bar strong {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Screen chrome */
+    .deck-label {
+      width: var(--page-w);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9a9aa8;
+      margin-bottom: -16px;
+    }
+
+    /* Mobile: scale the fixed 960×540 slides to fit the viewport.
+       Design and layout stay identical — no reflow.
+       Must follow .deck-label so mobile margins win over the desktop pull-up. */
+    @media screen and (max-width: 1008px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
+      .deck {
+        width: 100%;
+        padding: 16px 0 48px;
+        gap: 0;
+      }
+
+      .deck-label {
+        width: auto;
+        max-width: 100%;
+        margin: 20px 0 10px;
+        padding: 0 12px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .page {
+        --deck-scale: calc((100vw - 16px) / var(--page-w));
+        transform: scale(var(--deck-scale));
+        transform-origin: top center;
+        /* Collapse unused layout height under the scaled visual, keep a gap */
+        margin-bottom: calc(var(--page-h) * (var(--deck-scale) - 1) + 8px);
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    @media print {
+      body { background: white; overflow: visible; }
+      .deck { padding: 0; gap: 0; width: auto; }
+      .deck-label { display: none; }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        transform: none;
+        margin-bottom: 0;
+        page-break-after: always;
+        break-after: page;
+      }
+      .page:last-child { page-break-after: auto; }
+      @page {
+        size: 960px 540px;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         1. COVER / EXECUTIVE SUMMARY
+         Edit: week label, date range, three highlight blurbs
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">01 · Cover</div>
+    <section class="page page--cover" aria-label="Cover and executive summary">
+      <div class="brand-shape brand-shape--cover" aria-hidden="true"></div>
+
+      <div class="page-inner">
+        <div class="cover-top">
+          <img class="cover-logo" src="assets/sis-global-logo-white.png" alt="SIS Global">
+          <div class="cover-week">
+            Week 6 · August 2026
+            <strong>10 – 14 August</strong>
+          </div>
+        </div>
+
+        <div class="cover-main">
+          <p class="eyebrow">Growth Experts × SIS Global</p>
+          <h1>Weekly Growth<br><span>Report</span></h1>
+          <div class="rule"></div>
+          <p class="lede">
+            Campaign performance, CRM and data progress, and the next steps for outbound,
+            distilled for the week ahead.
+          </p>
+        </div>
+
+        <div class="highlights">
+          <article class="highlight">
+            <div class="num">01</div>
+            <h3>Campaign performance</h3>
+            <p>EDUCAUSE Cold live — 45 sent, 95.56% open rate · HE US Recruitment also live (stats from next week).</p>
+          </article>
+          <article class="highlight">
+            <div class="num">02</div>
+            <h3>CRM and data progress</h3>
+            <p>+150 contacts enriched; +141 uploaded to D365 · HE US student recruitment list live.</p>
+          </article>
+          <article class="highlight">
+            <div class="num">03</div>
+            <h3>Next steps for outbound</h3>
+            <p>Set up Power Automate · then Business Central and HE UK · confirm EDUCAUSE.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         2. PERFORMANCE THIS WEEK
+         Edit: four metric cards, summary, “What this means”
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">02 · Performance</div>
+    <section class="page" aria-label="Performance this week">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">This week</p>
+            <h2>Performance</h2>
+          </div>
+          <div class="meta">
+            Smartlead · EDUCAUSE Cold
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric-card">
+            <div class="label">Sent</div>
+            <div class="value">45</div>
+            <div class="hint">160 unique leads in campaign</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Opened</div>
+            <div class="value">43</div>
+            <div class="hint"><em>95.56%</em> open rate</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Clicked</div>
+            <div class="value">0</div>
+            <div class="hint"><em>0%</em> click rate</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Replied</div>
+            <div class="value">0</div>
+            <div class="hint"><em>0%</em> reply rate</div>
+          </div>
+        </div>
+
+        <div class="perf-grid">
+          <div class="panel">
+            <div class="panel-label">Performance summary</div>
+            <p>
+              <strong>EDUCAUSE Cold</strong> is live (Active, created 6 Aug): 45 of 160 unique
+              leads contacted — 45 sent, 43 opened (95.56% open rate), with 0 clicks, 0 replies
+              and 0 bounces. Completion sits at 9.4% (45 of 480 planned sends); 115 leads yet
+              to start. <strong>HE US Recruitment</strong> is also live — stats reported from next week.
+            </p>
+          </div>
+          <div class="panel panel--callout">
+            <div class="panel-label">What this means</div>
+            <p>
+              Open engagement on EDUCAUSE Cold is exceptionally strong with clean deliverability
+              (0% bounce). Two Smartlead campaigns are now live; next week we add HE US Recruitment
+              performance and close the loop with Power Automate writing results back to D365.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Smartlead · EDUCAUSE Cold</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         03. CAMPAIGN BREAKDOWN
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">03 · By campaign</div>
+    <section class="page" aria-label="Campaign performance breakdown">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">By campaign</p>
+            <h2>EDUCAUSE Cold</h2>
+          </div>
+          <div class="meta">
+            Smartlead · Active
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="campaign-grid">
+          <article class="campaign-card">
+            <div>
+              <div class="camp-name">EDUCAUSE Cold · Overall</div>
+              <div class="camp-id">High engagement · 160 leads</div>
+            </div>
+            <div class="camp-stats">
+              <div class="camp-stat">
+                <div class="v">45</div>
+                <div class="l">Sent</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">95.6%</div>
+                <div class="l">Open</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">0%</div>
+                <div class="l">Reply</div>
+              </div>
+            </div>
+            <div class="camp-foot">
+              <span>Opened <strong>43</strong></span>
+              <span>Bounced <strong>0</strong></span>
+            </div>
+          </article>
+
+          <article class="campaign-card">
+            <div>
+              <div class="camp-name">Variant A · Baseline</div>
+              <div class="camp-id">Started 6 Aug</div>
+            </div>
+            <div class="camp-stats">
+              <div class="camp-stat">
+                <div class="v">23</div>
+                <div class="l">Sent</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">100%</div>
+                <div class="l">Open</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">0%</div>
+                <div class="l">Reply</div>
+              </div>
+            </div>
+            <div class="camp-foot">
+              <span>Opened <strong>23</strong></span>
+              <span>Bounced <strong>0</strong></span>
+            </div>
+          </article>
+
+          <article class="campaign-card">
+            <div>
+              <div class="camp-name">Variant B</div>
+              <div class="camp-id">Started 6 Aug</div>
+            </div>
+            <div class="camp-stats">
+              <div class="camp-stat">
+                <div class="v">22</div>
+                <div class="l">Sent</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">90.9%</div>
+                <div class="l">Open</div>
+              </div>
+              <div class="camp-stat">
+                <div class="v">0%</div>
+                <div class="l">Reply</div>
+              </div>
+            </div>
+            <div class="camp-foot">
+              <span>Opened <strong>20</strong></span>
+              <span>Bounced <strong>0</strong></span>
+            </div>
+          </article>
+        </div>
+
+        <div class="health-strip">
+          <div class="health-item">
+            <div class="l">Completion</div>
+            <div class="v">9.4%</div>
+            <div class="s">45 of 480 sends processed</div>
+          </div>
+          <div class="health-item">
+            <div class="l">Yet to start</div>
+            <div class="v">115</div>
+            <div class="s">Leads still queued</div>
+          </div>
+          <div class="health-item">
+            <div class="l">Bounce rate</div>
+            <div class="v good">0%</div>
+            <div class="s">No bounces recorded</div>
+          </div>
+          <div class="health-item">
+            <div class="l">Positive replies</div>
+            <div class="v">0</div>
+            <div class="s">0% of replies</div>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Smartlead · EDUCAUSE Cold</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         3. CRM AND PROSPECTING PROGRESS
+         Pipeline stages + prospect flow / next steps
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">04 · CRM &amp; prospecting</div>
+    <section class="page page--crm" aria-label="CRM and prospecting progress">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">Pipeline</p>
+            <h2>CRM and prospecting progress</h2>
+          </div>
+          <div class="meta">
+            Apollo.io → Dynamics 365
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="pipeline-row">
+          <div class="metric-card">
+            <div class="value">1,001</div>
+            <div class="title">Apollo Contacts Enriched</div>
+            <div class="hint"><em>+150 this week</em> · Verified emails · Apollo ICP filters</div>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="metric-card">
+            <div class="value">774</div>
+            <div class="title">Uploaded to Dynamics 365</div>
+            <div class="hint"><em>+141 this week</em> · CRM-ready contacts</div>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="metric-card">
+            <div class="value">2</div>
+            <div class="title">Segments Created</div>
+            <div class="hint">Ready for outbound campaigns</div>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="metric-card">
+            <div class="value">2</div>
+            <div class="title">Smartlead Campaigns Live</div>
+            <div class="hint">EDUCAUSE Cold · HE US Recruitment</div>
+          </div>
+        </div>
+
+        <div class="crm-split">
+          <div class="crm-card">
+            <div class="card-title">Prospect Pipeline</div>
+            <div class="process-flow">
+              <div class="process-step">
+                <div class="process-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                </div>
+                <div class="process-label">Apollo</div>
+              </div>
+              <div class="process-connector" aria-hidden="true">↓</div>
+              <div class="process-step">
+                <div class="process-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+                </div>
+                <div class="process-label">Dynamics 365</div>
+              </div>
+              <div class="process-connector" aria-hidden="true">↓</div>
+              <div class="process-step">
+                <div class="process-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+                </div>
+                <div class="process-label">Segmented</div>
+              </div>
+              <div class="process-connector" aria-hidden="true">↓</div>
+              <div class="process-step">
+                <div class="process-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
+                </div>
+                <div class="process-label">Smartlead</div>
+              </div>
+            </div>
+            <p class="process-note">
+              Prospects are progressing through a structured workflow from enrichment in
+              Apollo into Dynamics 365 before being deployed into Smartlead outbound campaigns.
+              EDUCAUSE Cold and HE US Recruitment are both live.
+            </p>
+          </div>
+
+          <div class="crm-card">
+            <div class="card-title">Next Steps</div>
+            <ul class="checklist">
+              <li><span class="check" aria-hidden="true">✓</span><span>Launch EDUCAUSE Cold on Smartlead</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Launch HE US Recruitment on Smartlead</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Upload HE US student recruitment list to D365</span></li>
+              <li><span class="check" aria-hidden="true">→</span><span>Set up Power Automate (results → D365)</span></li>
+              <li><span class="check" aria-hidden="true">→</span><span>Confirm EDUCAUSE go / no-go</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Dynamics 365 and Apollo.io</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         05. CRM UPLOAD BREAKDOWN
+         Weekly HE imports that make up the Dynamics 365 total
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">05 · CRM upload breakdown</div>
+    <section class="page page--crm" aria-label="CRM upload breakdown">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">Pipeline</p>
+            <h2>Who was uploaded to Dynamics</h2>
+          </div>
+          <div class="meta">
+            Higher Education contacts
+            <span class="meta-date">17 Jul – 14 Aug 2026</span>
+          </div>
+        </div>
+
+        <div class="crm-breakdown-intro">
+          <p>
+            All <strong>774</strong> CRM-ready contacts uploaded to Dynamics 365 are
+            <strong>Higher Education</strong> contacts, imported across five weekly batches.
+          </p>
+          <div class="crm-breakdown-total">
+            <div class="v">774</div>
+            <div class="l">Total uploaded</div>
+          </div>
+        </div>
+
+        <table class="import-table">
+          <thead>
+            <tr>
+              <th>Weekly import</th>
+              <th>Segment</th>
+              <th>Contacts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="import-file">17-july-2026-he-global</td>
+              <td class="import-seg">HE Global</td>
+              <td class="import-count">67</td>
+            </tr>
+            <tr>
+              <td class="import-file">24-july-2026-he-sa</td>
+              <td class="import-seg">HE South Africa</td>
+              <td class="import-count">145</td>
+            </tr>
+            <tr>
+              <td class="import-file">31-july-2026-he-global</td>
+              <td class="import-seg">HE Global</td>
+              <td class="import-count">262</td>
+            </tr>
+            <tr>
+              <td class="import-file">7-august-2026-he-us</td>
+              <td class="import-seg">HE (EDUCAUSE) <span>32</span> · HE US <span>127</span></td>
+              <td class="import-count">159</td>
+            </tr>
+            <tr class="is-week">
+              <td class="import-file">14-aug-2026-he-us-student-recruitment</td>
+              <td class="import-seg">HE US Student Recruitment</td>
+              <td class="import-count">141</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="region-strip">
+          <div class="region-item">
+            <div class="l">HE Global</div>
+            <div class="v">329</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE South Africa</div>
+            <div class="v">145</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE EDUCAUSE</div>
+            <div class="v">32</div>
+          </div>
+          <div class="region-item">
+            <div class="l">HE US</div>
+            <div class="v">268</div>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Dynamics 365 weekly imports · +141 this week</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         06. APOLLO PROSPECT UNIVERSE
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">06 · Apollo prospect universe</div>
+    <section class="page page--crm" aria-label="Apollo prospect universe">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">Pipeline</p>
+            <h2>CRM and prospecting progress</h2>
+          </div>
+          <div class="meta">
+            Apollo.io → Dynamics 365
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="universe-intro">
+          <h3>Apollo Prospect Universe</h3>
+          <p>Current prospect volumes available across SIS solution areas.</p>
+        </div>
+
+        <div class="universe-grid">
+          <div class="universe-card">
+            <div class="sol">EDU365</div>
+            <div class="total">8,490</div>
+            <ul class="countries">
+              <li><span>United States</span><strong>6,795</strong></li>
+              <li><span>United Kingdom</span><strong>1,015</strong></li>
+              <li><span>Ireland</span><strong>47</strong></li>
+              <li><span>South Africa</span><strong>61</strong></li>
+              <li><span>Australia</span><strong>572</strong></li>
+            </ul>
+          </div>
+
+          <div class="universe-card">
+            <div class="sol">Fleet365</div>
+            <div class="total">8,863</div>
+            <ul class="countries">
+              <li><span>United States</span><strong>6,218</strong></li>
+              <li><span>United Kingdom</span><strong>1,108</strong></li>
+              <li><span>Ireland</span><strong>127</strong></li>
+              <li><span>South Africa</span><strong>310</strong></li>
+              <li><span>Australia</span><strong>1,100</strong></li>
+            </ul>
+          </div>
+
+          <div class="universe-card">
+            <div class="sol">RealEstate365</div>
+            <div class="total">2,543</div>
+            <ul class="countries">
+              <li><span>United States</span><strong>1,636</strong></li>
+              <li><span>United Kingdom</span><strong>606</strong></li>
+              <li><span>Ireland</span><strong>18</strong></li>
+              <li><span>South Africa</span><strong>26</strong></li>
+              <li><span>Australia</span><strong>257</strong></li>
+            </ul>
+          </div>
+
+          <div class="universe-card">
+            <div class="sol">Business Central</div>
+            <div class="total">11,662</div>
+            <ul class="countries">
+              <li><span>United States</span><strong>7,069</strong></li>
+              <li><span>United Kingdom</span><strong>2,255</strong></li>
+              <li><span>Ireland</span><strong>385</strong></li>
+              <li><span>South Africa</span><strong>579</strong></li>
+              <li><span>Australia</span><strong>1,374</strong></li>
+            </ul>
+          </div>
+
+          <div class="universe-card">
+            <div class="sol">Dynamics 365 F&amp;O</div>
+            <div class="total">7,790</div>
+            <ul class="countries">
+              <li><span>United States</span><strong>5,686</strong></li>
+              <li><span>United Kingdom</span><strong>1,172</strong></li>
+              <li><span>Ireland</span><strong>122</strong></li>
+              <li><span>South Africa</span><strong>235</strong></li>
+              <li><span>Australia</span><strong>575</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Note:</strong> Apollo prospect volumes are estimated and based on current search criteria.
+          Figures may vary as records are enriched, deduplicated, verified and allocated to campaigns.
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Source: Apollo.io</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         4. NEXT STEP: OUTBOUND OUTREACH
+         Edit: architecture labels, three points, setup priorities
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">07 · Outbound</div>
+    <section class="page page--outbound" aria-label="Next step outbound outreach">
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Next step</p>
+            <h2>Close the loop with Power Automate</h2>
+          </div>
+          <div class="meta">
+            Results back to CRM
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="flow" role="list">
+          <div class="flow-step" role="listitem">
+            <div class="tool">Apollo</div>
+            <div class="role">Prospecting and enrichment</div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step" role="listitem">
+            <div class="tool">Dynamics 365</div>
+            <div class="role">Master CRM and source of truth</div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step" role="listitem">
+            <div class="tool">Smartlead</div>
+            <div class="role">Cold email execution · live</div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step" role="listitem">
+            <div class="tool">Power Automate</div>
+            <div class="role">Results written back to D365</div>
+          </div>
+        </div>
+
+        <div class="domain-block">
+          <div class="domain-card">
+            <h3>What we need to set up</h3>
+            <p>
+              Smartlead is live for EDUCAUSE Cold and HE US Recruitment.
+              The remaining step in the outbound stack is Power Automate — so opens, replies,
+              bounces and status changes flow back into Dynamics 365 as the system of record.
+            </p>
+            <p>
+              Without this write-back, campaign activity stays in Smartlead only. Connecting it
+              keeps CRM timelines accurate and makes reporting consistent week to week.
+            </p>
+          </div>
+          <div class="domain-card domain-card--note">
+            <h3>Priority for next week</h3>
+            <p>
+              Configure Power Automate to sync Smartlead campaign outcomes into Dynamics 365 —
+              contact activity, reply status and key engagement signals.
+            </p>
+            <p>
+              Once live, every outbound campaign (including HE US Recruitment stats from next week)
+              will update CRM automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>Apollo → D365 → Smartlead → Power Automate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         5. PRIORITIES FOR NEXT WEEK
+         Edit: four numbered actions
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">08 · Priorities</div>
+    <section class="page" aria-label="Priorities for next week">
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--purple">Focus</p>
+            <h2>Priorities for next week</h2>
+          </div>
+          <div class="meta">
+            Controlled pilot before scale
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <article class="action">
+            <div class="n">01</div>
+            <div>
+              <h3>Set up Power Automate</h3>
+              <p>Connect Smartlead to Dynamics 365 so campaign results write back to CRM automatically.</p>
+            </div>
+          </article>
+          <article class="action">
+            <div class="n">02</div>
+            <div>
+              <h3>Start Business Central messaging &amp; prospecting</h3>
+              <p>Begin drafting messaging and building the prospect list for Business Central.</p>
+            </div>
+          </article>
+          <article class="action">
+            <div class="n">03</div>
+            <div>
+              <h3>Start HE UK messaging &amp; prospecting</h3>
+              <p>Begin drafting messaging and building the prospect list for Higher Education UK.</p>
+            </div>
+          </article>
+          <article class="action">
+            <div class="n">04</div>
+            <div>
+              <h3>Confirm EDUCAUSE go / no-go</h3>
+              <p>Confirm whether EDUCAUSE is going ahead. If not, pause outbound until direction is clear.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
+          <span>10–14 August 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         06 · CLOSE
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="deck-label">09 · Close</div>
+    <section class="page page--close" aria-label="Report close">
+      <div class="brand-shape brand-shape--close" aria-hidden="true"></div>
+
+      <div class="page-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Close</p>
+            <h2>Week 6 complete.<br>Power Automate next.</h2>
+          </div>
+          <div class="meta">
+            Weekly Growth Report
+            <span class="meta-date">10–14 August 2026</span>
+          </div>
+        </div>
+
+        <div class="close-grid">
+          <article class="close-card">
+            <div class="num">01</div>
+            <h3>Two campaigns live</h3>
+            <p>EDUCAUSE Cold: 45 sent, 95.56% open · HE US Recruitment live — stats from next week.</p>
+          </article>
+          <article class="close-card">
+            <div class="num">02</div>
+            <h3>CRM pipeline growing</h3>
+            <p>+150 enriched, +141 uploaded to D365 · HE US student recruitment list live.</p>
+          </article>
+          <article class="close-card">
+            <div class="num">03</div>
+            <h3>Outbound next steps</h3>
+            <p>Set up Power Automate; start BC and HE UK; confirm EDUCAUSE or pause outbound.</p>
+          </article>
+        </div>
+
+        <div class="close-next">
+          <div>
+            <div class="label">Upcoming</div>
+            <div class="title">SA Messaging Workshop</div>
+          </div>
+          <div class="detail">
+            Next up<br>
+            South Africa messaging workshop
+          </div>
+        </div>
+
+        <div class="page-footer-bar">
+          <span><strong>Asta Geldenhuys &amp; Edwin Mbugua</strong> · Growth Experts · growthexperts.co</span>
+          <span>For Candice Jenkinson, Head of Marketing</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
