@@ -1,1222 +1,980 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIS Global Weekly Growth Report — Week 11 · September 2026</title>
-  <!--
-    SIS GLOBAL — WEEKLY GROWTH REPORT
-    Week 11 · 15–21 September 2026
-    Source: Smartlead (18–21 Sep window)
-    Data: 44 sent · 33 opened (75%) · 1 reply (3.03%) · 0 bounces
-    All 5 campaigns completed their sequences this week.
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --sis-primary: #1e508a;
-      --sis-secondary-1: #447fb3;
-      --sis-secondary-2: #55a8c4;
-      --sis-secondary-3: #584eaa;
-      --sis-purple: #1e508a;
-      --sis-purple-dark: #1e508a;
-      --sis-blue: #447fb3;
-      --sis-green: #55a8c4;
-      --sis-green-dark: #447fb3;
-      --sis-text: #202124;
-      --sis-muted: #5f6b7a;
-      --sis-light: #f4f7fa;
-      --sis-border: #d7dee8;
-      --sis-white: #ffffff;
-      --sis-footer: #1e508a;
-      --sis-gradient: linear-gradient(135deg, #1e508a 0%, #244f8f 55%, #1a4578 100%);
-      --page-w: 960px;
-      --page-h: 540px;
-      --radius: 16px;
-      --radius-sm: 12px;
-      --font: "Plus Jakarta Sans", "Segoe UI", sans-serif;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: var(--font);
-      color: var(--sis-text);
-      background: #e8eef4;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.45;
-    }
-
-    .deck {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      padding: 36px 24px 64px;
-    }
-
-    .page {
-      position: relative;
-      width: var(--page-w);
-      height: var(--page-h);
-      overflow: hidden;
-      background: var(--sis-white);
-      border-radius: 4px;
-      box-shadow: 0 12px 40px rgba(32, 33, 36, 0.12);
-    }
-
-    .page-inner {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      padding: 32px 44px 40px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-shape {
-      position: absolute;
-      top: 0;
-      height: var(--page-h);
-      width: calc(var(--page-h) / 2);
-      background-image: url("assets/sis-global-logo-white-shape.svg");
-      background-repeat: no-repeat;
-      background-size: var(--page-h) var(--page-h);
-      opacity: 0.1;
-      pointer-events: none;
-      user-select: none;
-      z-index: 1;
-    }
-
-    .brand-shape--cover { right: 0; background-position: left center; }
-    .brand-shape--close { left: 0; background-position: right center; }
-
-    .eyebrow {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--sis-green);
-    }
-
-    .eyebrow--purple { color: var(--sis-purple); }
-    .eyebrow--muted { color: var(--sis-muted); }
-
-    h1 { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
-    h2 { font-size: 28px; font-weight: 750; letter-spacing: -0.025em; line-height: 1.15; color: var(--sis-text); }
-    h3 { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
-
-    .lede { font-size: 15px; color: rgba(255,255,255,0.88); max-width: 420px; line-height: 1.5; }
-
-    .rule { height: 2px; width: 48px; background: var(--sis-green); border-radius: 2px; margin: 14px 0 18px; }
-
-    .section-head {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--sis-border);
-    }
-
-    .section-head .meta { text-align: right; font-size: 12px; color: var(--sis-muted); font-weight: 500; line-height: 1.45; }
-    .section-head .meta .meta-date { display: block; margin-top: 2px; color: var(--sis-text); font-weight: 600; }
-
-    .page-footer-bar {
-      margin-top: auto;
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 10.5px;
-      color: var(--sis-muted);
-      line-height: 1.4;
-    }
-
-    .page-footer-bar strong { color: var(--sis-text); font-weight: 600; }
-
-    /* ═══ 1. COVER ═══ */
-    .page--cover { background: var(--sis-gradient); color: var(--sis-white); }
-    .page--cover .page-inner { padding: 40px 48px 36px; }
-
-    .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
-    .cover-logo { height: 36px; width: auto; }
-
-    .cover-week {
-      text-align: right;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.75);
-    }
-
-    .cover-week strong {
-      display: block;
-      font-size: 14px;
-      color: var(--sis-green);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-top: 2px;
-    }
-
-    .cover-main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 28px 0 12px;
-      max-width: 560px;
-    }
-
-    .cover-main h1 { color: var(--sis-white); margin-top: 10px; }
-    .cover-main h1 span { color: var(--sis-green); }
-
-    .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
-
-    .highlight {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: var(--radius-sm);
-      padding: 16px 18px;
-      backdrop-filter: blur(6px);
-    }
-
-    .highlight .num { font-size: 11px; font-weight: 700; color: var(--sis-green); letter-spacing: 0.08em; margin-bottom: 8px; }
-    .highlight h3 { color: var(--sis-white); font-size: 14px; margin-bottom: 6px; }
-    .highlight p { font-size: 12px; color: rgba(255,255,255,0.78); line-height: 1.45; }
-
-    /* ═══ 2. PERFORMANCE ═══ */
-    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px; }
-
-    .metric-card {
-      background: var(--sis-light);
-      border: 1px solid var(--sis-border);
-      border-radius: var(--radius-sm);
-      padding: 14px 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .metric-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--sis-secondary-1); }
-    .metrics .metric-card:nth-child(1)::before { background: var(--sis-secondary-1); }
-    .metrics .metric-card:nth-child(2)::before { background: var(--sis-secondary-2); }
-    .metrics .metric-card:nth-child(3)::before { background: var(--sis-secondary-3); }
-    .metrics .metric-card:nth-child(4)::before { background: var(--sis-primary); }
-
-    .pipeline-row .metric-card:nth-child(1)::before { background: var(--sis-secondary-1); }
-    .pipeline-row .metric-card:nth-child(3)::before { background: var(--sis-secondary-2); }
-    .pipeline-row .metric-card:nth-child(5)::before { background: var(--sis-secondary-3); }
-    .pipeline-row .metric-card:nth-child(7)::before { background: var(--sis-primary); }
-
-    .metric-card .label { font-size: 11px; font-weight: 600; color: var(--sis-muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
-    .metric-card .value { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; color: var(--sis-text); line-height: 1; }
-    .metric-card .value .unit { font-size: 18px; font-weight: 700; color: var(--sis-purple); }
-    .metric-card .hint { margin-top: 6px; font-size: 11.5px; color: var(--sis-muted); }
-    .metric-card .hint em { font-style: normal; color: var(--sis-green-dark); font-weight: 600; }
-    .metric-card .title { margin-top: 8px; font-size: 12.5px; font-weight: 700; color: var(--sis-text); line-height: 1.3; }
-
-    .perf-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; flex: 1; }
-
-    .panel { border: 1px solid var(--sis-border); border-radius: var(--radius-sm); padding: 18px 20px; background: var(--sis-white); }
-    .panel--callout { background: linear-gradient(160deg, #f3f7fb 0%, #eef5f8 100%); border-color: #d0dce8; }
-    .panel .panel-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sis-purple); margin-bottom: 8px; }
-    .panel p { font-size: 13.5px; color: var(--sis-text); line-height: 1.55; }
-    .panel--callout p { color: #2a2b32; }
-
-    /* ═══ 3. CAMPAIGN BREAKDOWN ═══ */
-    .campaign-single {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 12px;
-    }
-
-    .campaign-card-large {
-      border: 1px solid var(--sis-border);
-      border-top: 4px solid var(--sis-secondary-1);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      background: var(--sis-white);
-    }
-
-    .camp-name-lg { font-size: 15px; font-weight: 700; color: var(--sis-text); letter-spacing: -0.01em; margin-bottom: 4px; }
-    .camp-id-lg { font-size: 11.5px; font-weight: 500; color: var(--sis-muted); margin-bottom: 14px; }
-
-    .camp-stats-lg { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 12px; }
-
-    .camp-stat-lg { background: var(--sis-light); border-radius: 10px; padding: 12px 8px; text-align: center; }
-    .camp-stat-lg .v { font-size: 22px; font-weight: 800; color: var(--sis-purple-dark); letter-spacing: -0.02em; line-height: 1; }
-    .camp-stat-lg .l { margin-top: 5px; font-size: 10px; font-weight: 600; color: var(--sis-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-
-    .completed-banner {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: linear-gradient(135deg, #f0f6ff 0%, #e8f0fb 100%);
-      border: 1px solid #c5d8f0;
-      border-radius: var(--radius-sm);
-      padding: 14px 18px;
-    }
-
-    .completed-badge {
-      background: var(--sis-primary);
-      color: var(--sis-white);
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .completed-text { font-size: 13px; color: var(--sis-text); line-height: 1.5; }
-    .completed-text strong { color: var(--sis-primary); font-weight: 700; }
-
-    .completed-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; }
-
-    .completed-pill {
-      border: 1px solid var(--sis-border);
-      border-radius: 8px;
-      padding: 7px 10px;
-      text-align: center;
-      background: var(--sis-white);
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--sis-muted);
-      line-height: 1.35;
-    }
-
-    .completed-pill .pill-name { font-weight: 700; color: var(--sis-text); font-size: 11.5px; margin-bottom: 2px; }
-
-    /* ═══ 4. PROGRESSION ═══ */
-    .page--progress .page-inner { padding: 24px 44px 16px; }
-    .page--progress .section-head { margin-bottom: 12px; padding-bottom: 8px; }
-    .page--progress .page-footer-bar { padding-top: 10px; }
-
-    .prog-table { width: 100%; border-collapse: collapse; margin-bottom: 10px; flex-shrink: 0; }
-
-    .prog-table th, .prog-table td { padding: 7px 10px; text-align: center; vertical-align: middle; }
-
-    .prog-table th {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--sis-muted);
-      border-bottom: 1px solid var(--sis-border);
-    }
-
-    .prog-table th .phase { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; color: var(--sis-text); text-transform: uppercase; margin-bottom: 2px; }
-    .prog-table th .sub { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--sis-muted); }
-
-    .prog-table th:first-child, .prog-table td:first-child {
-      text-align: left;
-      padding-left: 0;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--sis-muted);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .prog-table td { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; color: var(--sis-text); border-bottom: 1px solid var(--sis-border); }
-    .prog-table tr:last-child td { border-bottom: none; }
-    .prog-table td.is-empty { color: var(--sis-border); font-weight: 600; }
-
-    .prog-table th.is-now, .prog-table td.is-now { background: rgba(30,80,138,0.06); }
-    .prog-table th.is-now { color: var(--sis-primary); border-radius: 8px 8px 0 0; }
-    .prog-table th.is-now .phase { color: var(--sis-primary); }
-    .prog-table td.is-now { color: var(--sis-primary); }
-    .prog-table tr:last-child td.is-now { border-radius: 0 0 8px 8px; }
-
-    .phase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px; flex-shrink: 0; }
-
-    .phase-card {
-      border: 1px solid var(--sis-border);
-      border-top: 3px solid var(--sis-secondary-1);
-      border-radius: var(--radius-sm);
-      padding: 10px 12px 11px;
-      background: var(--sis-white);
-    }
-
-    .phase-grid .phase-card:nth-child(1) { border-top-color: var(--sis-secondary-1); }
-    .phase-grid .phase-card:nth-child(2) { border-top-color: var(--sis-secondary-2); }
-    .phase-grid .phase-card:nth-child(3) { border-top-color: var(--sis-secondary-3); }
-
-    .phase-card .k { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sis-muted); margin-bottom: 3px; }
-    .phase-card h3 { font-size: 13px; font-weight: 700; color: var(--sis-text); margin-bottom: 4px; }
-    .phase-card p { font-size: 11.5px; color: var(--sis-muted); line-height: 1.4; }
-
-    .prog-takeaway {
-      background: var(--sis-light);
-      border: 1px solid var(--sis-border);
-      border-left: 4px solid var(--sis-primary);
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
-      font-size: 12px;
-      color: var(--sis-text);
-      line-height: 1.45;
-      flex-shrink: 0;
-    }
-
-    .prog-takeaway strong { color: var(--sis-primary); font-weight: 700; }
-
-    /* ═══ 5. CRM ═══ */
-    .page--crm { background: var(--sis-white); }
-
-    .pipeline-row { display: flex; align-items: stretch; gap: 0; margin-bottom: 12px; flex-shrink: 0; }
-    .pipeline-row .metric-card { flex: 1; background: var(--sis-white); min-width: 0; padding: 12px 14px; }
-    .pipeline-row .metric-card .value { font-size: 28px; }
-    .pipeline-row .metric-card .title { margin-top: 6px; font-size: 12px; }
-    .pipeline-row .metric-card .hint { margin-top: 4px; font-size: 11px; }
-
-    .pipeline-arrow { display: flex; align-items: center; justify-content: center; width: 22px; flex-shrink: 0; color: var(--sis-purple); font-size: 16px; font-weight: 700; opacity: 0.45; }
-
-    .crm-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 1; min-height: 0; overflow: hidden; }
-
-    .crm-card { background: var(--sis-white); border: 1px solid var(--sis-border); border-radius: var(--radius-sm); padding: 14px 16px 12px; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
-    .crm-card .card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sis-purple); margin-bottom: 10px; flex-shrink: 0; }
-
-    .process-flow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 8px; flex-shrink: 0; }
-    .process-step { display: flex; align-items: center; gap: 10px; }
-
-    .process-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--sis-primary); color: var(--sis-white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .process-icon svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-    .process-label { font-size: 13px; font-weight: 700; color: var(--sis-text); }
-
-    .process-connector { width: 24px; height: 8px; display: flex; align-items: center; justify-content: center; color: var(--sis-green); font-size: 11px; font-weight: 700; line-height: 1; }
-
-    .process-note { font-size: 11.5px; color: var(--sis-muted); line-height: 1.4; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--sis-border); flex-shrink: 1; }
-
-    .checklist { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
-    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; color: var(--sis-text); line-height: 1.35; }
-
-    .check { flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; background: rgba(40,209,174,0.15); color: var(--sis-green-dark); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; margin-top: 1px; }
-
-    .page--crm .page-footer-bar { flex-shrink: 0; position: relative; z-index: 2; background: var(--sis-white); }
-
-    /* ═══ 6. OUTBOUND ═══ */
-    .page--outbound {
-      background: var(--sis-primary);
-      background-image: linear-gradient(145deg, #1e508a 0%, #244f8f 50%, #1a4578 100%);
-      color: var(--sis-white);
-    }
-
-    .page--outbound h2 { color: var(--sis-white); }
-    .page--outbound .section-head { border-bottom-color: rgba(255,255,255,0.16); }
-    .page--outbound .section-head .meta { color: rgba(255,255,255,0.55); }
-    .page--outbound .section-head .meta .meta-date { color: rgba(255,255,255,0.85); }
-
-    .flow { display: flex; align-items: stretch; gap: 0; margin: 4px 0 14px; }
-
-    .flow-step { flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-sm); padding: 14px 14px 12px; text-align: center; }
-    .flow-step .tool { font-size: 14px; font-weight: 700; color: var(--sis-white); margin-bottom: 4px; }
-    .flow-step .role { font-size: 11.5px; color: rgba(255,255,255,0.78); line-height: 1.35; }
-
-    .flow-arrow { display: flex; align-items: center; justify-content: center; width: 28px; flex-shrink: 0; color: var(--sis-green); font-size: 18px; font-weight: 700; }
-
-    .domain-block { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 12px; flex: 1; min-height: 0; }
-
-    .domain-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); padding: 14px 16px 15px; }
-    .domain-card h3 { color: rgba(255,255,255,0.7); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
-    .domain-card p { font-size: 12px; line-height: 1.45; color: rgba(255,255,255,0.88); margin-bottom: 8px; }
-    .domain-card p:last-child { margin-bottom: 0; }
-    .domain-card .domains { font-weight: 700; color: var(--sis-white); }
-
-    .domain-card--note { background: rgba(0,0,0,0.18); border-color: rgba(255,255,255,0.18); border-top: 3px solid var(--sis-secondary-2); }
-    .domain-card--note h3 { color: var(--sis-secondary-2); }
-
-    .page--outbound .page-footer-bar { border-top: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.45); }
-    .page--outbound .page-footer-bar strong { color: rgba(255,255,255,0.75); }
-
-    /* ═══ 7. SENDING CAPACITY ═══ */
-    .page--infra .page-inner { padding: 22px 44px 18px; }
-    .page--infra .section-head { margin-bottom: 10px; padding-bottom: 8px; }
-    .page--infra .metrics { margin-bottom: 8px; }
-    .page--infra .metric-card { padding: 8px 14px; }
-    .page--infra .metric-card .value { font-size: 24px; }
-    .page--infra .metric-card .hint { margin-top: 3px; font-size: 11px; }
-    .page--infra .page-footer-bar { margin-top: 8px; padding-top: 8px; flex-shrink: 0; }
-
-    .infra-mid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 10px; margin-bottom: 8px; flex-shrink: 0; }
-
-    .infra-panel { border: 1px solid var(--sis-border); border-radius: var(--radius-sm); padding: 10px 14px; background: var(--sis-white); display: flex; flex-direction: column; min-height: 0; }
-    .infra-panel .panel-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sis-purple); margin-bottom: 6px; }
-
-    .infra-table { width: 100%; border-collapse: collapse; }
-    .infra-table th { text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sis-muted); padding: 0 8px 5px 0; border-bottom: 1px solid var(--sis-border); }
-    .infra-table th:nth-child(2), .infra-table td:nth-child(2) { text-align: right; white-space: nowrap; }
-    .infra-table td { padding: 6px 8px 6px 0; border-bottom: 1px solid var(--sis-border); font-size: 12.5px; color: var(--sis-text); vertical-align: middle; }
-    .infra-table tr:last-child td { border-bottom: none; padding-bottom: 0; }
-    .infra-table .dom { font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
-    .infra-table .boxes { font-weight: 800; color: var(--sis-primary); font-variant-numeric: tabular-nums; }
-    .infra-table .who { color: var(--sis-muted); font-weight: 600; }
-
-    .infra-formula { display: flex; align-items: baseline; justify-content: flex-start; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
-    .infra-formula .n { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; color: var(--sis-text); line-height: 1; }
-    .infra-formula .n.is-result { color: var(--sis-primary); font-size: 28px; }
-    .infra-formula .op { font-size: 16px; font-weight: 700; color: var(--sis-muted); }
-    .infra-formula .unit { font-size: 11px; font-weight: 600; color: var(--sis-muted); letter-spacing: 0.02em; }
-
-    .infra-sub { font-size: 11.5px; color: var(--sis-muted); margin-bottom: 6px; line-height: 1.4; }
-    .infra-sub strong { color: var(--sis-text); font-weight: 700; }
-
-    .infra-share { background: var(--sis-light); border: 1px solid var(--sis-border); border-radius: 8px; padding: 7px 12px; font-size: 11.5px; color: var(--sis-muted); line-height: 1.35; margin-bottom: 8px; flex-shrink: 0; }
-    .infra-share strong { color: var(--sis-text); font-weight: 600; }
-
-    .ramp { border: 1px solid var(--sis-border); border-radius: var(--radius-sm); padding: 8px 14px; background: var(--sis-light); flex-shrink: 0; }
-    .ramp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
-    .ramp-head .panel-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sis-purple); margin: 0; }
-    .ramp-head p { font-size: 11px; color: var(--sis-muted); margin: 0; }
-
-    .ramp-track { display: flex; align-items: stretch; gap: 0; }
-
-    .ramp-step { flex: 1; text-align: center; background: var(--sis-white); border: 1px solid var(--sis-border); border-radius: 8px; padding: 6px 4px 5px; }
-    .ramp-step .v { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--sis-text); line-height: 1; }
-    .ramp-step .l { margin-top: 2px; font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sis-muted); }
-
-    .ramp-step.is-start { border-color: #c5d8e8; }
-    .ramp-step.is-end { background: var(--sis-primary); border-color: var(--sis-primary); }
-    .ramp-step.is-end .v, .ramp-step.is-end .l { color: var(--sis-white); }
-    .ramp-step.is-gap { background: transparent; border-style: dashed; }
-    .ramp-step.is-gap .v { color: var(--sis-muted); letter-spacing: 0.12em; }
-
-    .ramp-arrow { display: flex; align-items: center; justify-content: center; width: 16px; flex-shrink: 0; color: var(--sis-secondary-2); font-size: 12px; font-weight: 700; }
-    .ramp-foot { margin-top: 6px; font-size: 11px; color: var(--sis-muted); line-height: 1.35; }
-    .ramp-foot strong { color: var(--sis-text); font-weight: 600; }
-
-    /* ═══ 8. PRIORITIES ═══ */
-    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; flex: 1; }
-
-    .action { border: 1px solid var(--sis-border); border-radius: var(--radius); padding: 22px 24px 20px; background: var(--sis-white); display: flex; gap: 16px; align-items: flex-start; }
-    .action .n { font-size: 28px; font-weight: 800; letter-spacing: -0.04em; color: var(--sis-green); line-height: 1; min-width: 42px; }
-    .action h3 { font-size: 15.5px; margin-bottom: 6px; color: var(--sis-text); }
-    .action p { font-size: 12.5px; color: var(--sis-muted); line-height: 1.5; }
-
-    /* ═══ CLOSE ═══ */
-    .page--close { background: var(--sis-gradient); color: var(--sis-white); }
-    .page--close .section-head { border-bottom-color: rgba(255,255,255,0.16); }
-    .page--close .section-head h2 { color: var(--sis-white); }
-    .page--close .section-head .meta { color: rgba(255,255,255,0.55); }
-    .page--close .section-head .meta .meta-date { color: var(--sis-green); }
-
-    .close-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
-
-    .close-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16); border-radius: var(--radius-sm); padding: 16px 16px 14px; }
-    .close-card .num { font-size: 11px; font-weight: 700; color: var(--sis-green); letter-spacing: 0.08em; margin-bottom: 8px; }
-    .close-card h3 { color: var(--sis-white); font-size: 14px; margin-bottom: 6px; }
-    .close-card p { font-size: 12px; color: rgba(255,255,255,0.78); line-height: 1.45; }
-
-    .close-next { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 4px; }
-    .close-next .label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sis-green); margin-bottom: 4px; }
-    .close-next .title { font-size: 14px; font-weight: 700; color: var(--sis-white); }
-    .close-next .detail { font-size: 12px; color: rgba(255,255,255,0.7); text-align: right; line-height: 1.4; }
-
-    .page--close .page-footer-bar { border-top: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.5); flex-shrink: 0; }
-    .page--close .page-footer-bar strong { color: rgba(255,255,255,0.85); }
-
-    /* Screen chrome */
-    .deck-label { width: var(--page-w); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9aa8; margin-bottom: -16px; }
-
-    @media screen and (max-width: 1008px) {
-      html, body { overflow-x: hidden; }
-      .deck { width: 100%; padding: 16px 0 48px; gap: 0; }
-      .deck-label { width: auto; max-width: 100%; margin: 20px 0 10px; padding: 0 12px; text-align: center; position: relative; z-index: 2; }
-      .page {
-        --deck-scale: calc((100vw - 16px) / var(--page-w));
-        transform: scale(var(--deck-scale));
-        transform-origin: top center;
-        margin-bottom: calc(var(--page-h) * (var(--deck-scale) - 1) + 8px);
-        position: relative;
-        z-index: 1;
-      }
-    }
-
-    @media print {
-      body { background: white; overflow: visible; }
-      .deck { padding: 0; gap: 0; width: auto; }
-      .deck-label { display: none; }
-      .page { box-shadow: none; border-radius: 0; transform: none; margin-bottom: 0; page-break-after: always; break-after: page; }
-      .page:last-child { page-break-after: auto; }
-      @page { size: 960px 540px; margin: 0; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect Mobile — SEO Audit Findings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #fafaf8;
+    --off: #f2f1ed;
+    --mid: #e8e6e0;
+    --muted: #8a8880;
+    --accent: #d4440c;
+    --accent-light: #fdf0eb;
+    --amber: #c97a10;
+    --amber-light: #fdf6e8;
+    --blue: #1a56a0;
+    --blue-light: #edf3fc;
+    --critical: #d4440c;
+    --high: #c97a10;
+    --medium: #1a56a0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--mid);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--black);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 60px 80px;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(212,68,12,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,122,16,0.12) 0%, transparent 70%),
+      var(--black);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 900px; }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 800;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+    align-items: flex-end;
+  }
+  .hero-desc {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(250,250,248,0.55);
+    max-width: 480px;
+    line-height: 1.65;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-shrink: 0;
+  }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(250,250,248,0.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+  }
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(250,250,248,0.3);
+    font-family: 'Syne', sans-serif;
+  }
+  .scroll-arrow {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  /* SECTION WRAPPER */
+  section { padding: 100px 60px; }
+  .section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--muted);
+    display: block;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+  }
+
+  /* EXECUTIVE SUMMARY */
+  .summary { background: var(--off); }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .summary-card {
+    background: var(--white);
+    padding: 36px 40px;
+  }
+  .summary-card.full { grid-column: 1 / -1; }
+  .summary-card-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .summary-card-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .summary-card-val.red { color: var(--accent); }
+  .summary-card-val.amber { color: var(--amber); }
+  .summary-card-val.blue { color: var(--blue); }
+  .summary-card-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 8px;
+    font-weight: 400;
+  }
+  .summary-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    max-width: 680px;
+  }
+  .summary-card strong { color: var(--black); font-weight: 500; }
+
+  /* FINDINGS */
+  .findings { background: var(--white); }
+  .findings-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .findings-intro p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* FINDING CARDS */
+  .finding {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 0;
+    border-top: 1px solid var(--mid);
+    padding: 36px 0;
+    align-items: start;
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .finding:last-child { border-bottom: 1px solid var(--mid); }
+  .finding:hover { background: var(--off); margin: 0 -60px; padding: 36px 60px; }
+  .finding-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    padding-top: 3px;
+  }
+  .finding-body { padding-right: 40px; }
+  .finding-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .finding-desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 640px;
+    margin-bottom: 16px;
+  }
+  .finding-impact {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    background: var(--off);
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: inline-block;
+  }
+  .finding-impact strong { font-weight: 600; }
+  .severity-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .severity-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .badge-critical { background: var(--accent-light); color: var(--accent); }
+  .badge-high { background: var(--amber-light); color: var(--amber); }
+  .badge-medium { background: var(--blue-light); color: var(--blue); }
+
+  /* SEVERITY BREAKDOWN */
+  .breakdown { background: var(--black); color: var(--white); }
+  .breakdown h2 { color: var(--white); }
+  .breakdown .section-label { color: rgba(255,255,255,0.35); }
+  .breakdown .section-label::before { background: rgba(255,255,255,0.35); }
+  .breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .breakdown-card {
+    padding: 40px;
+  }
+  .breakdown-card.critical { background: var(--accent); }
+  .breakdown-card.high { background: #a36010; }
+  .breakdown-card.medium { background: #14428a; }
+  .breakdown-count {
+    font-family: 'Syne', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: -0.04em;
+  }
+  .breakdown-type {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .breakdown-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .breakdown-items li {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .breakdown-items li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ROADMAP */
+  .roadmap { background: var(--off); }
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 48px;
+  }
+  .phase {
+    background: var(--white);
+    padding: 32px 28px;
+  }
+  .phase-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .phase-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .phase-time {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .phase-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .phase-items li {
+    font-size: 13px;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-left: 16px;
+    position: relative;
+  }
+  .phase-items li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--mid);
+  }
+  .phase-items li.done::before { background: #22a06b; }
+  .phase-items li.active::before { background: var(--accent); }
+
+  /* OPPORTUNITY */
+  .opportunity { background: var(--white); }
+  .opp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 48px;
+  }
+  .opp-card {
+    background: var(--off);
+    padding: 40px;
+  }
+  .opp-card.dark {
+    background: var(--black);
+    color: var(--white);
+  }
+  .opp-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .opp-card.dark h3 { color: var(--white); }
+  .opp-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .opp-card.dark p { color: rgba(255,255,255,0.55); }
+  .opp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .opp-list li {
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 400;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.45;
+  }
+  .opp-card.dark .opp-list li { color: rgba(255,255,255,0.8); }
+  .opp-list li::before {
+    content: '✓';
+    font-size: 12px;
+    color: #22a06b;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--accent);
+    padding: 100px 60px;
+    text-align: center;
+  }
+  .cta-section h2 {
+    color: var(--white);
+    font-size: clamp(36px, 5vw, 64px);
+    margin-bottom: 20px;
+  }
+  .cta-section p {
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--accent);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: rgba(255,255,255,0.35);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 0.06em;
+  }
+  footer strong { color: rgba(255,255,255,0.6); font-weight: 600; }
+
+  /* ENTRANCE ANIMATIONS */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    section { padding: 64px 24px; }
+    .hero { padding: 0 24px 64px; }
+    .hero:hover .finding { margin: 0; padding: 36px 0; }
+    .summary-grid,
+    .findings-intro,
+    .opp-grid { grid-template-columns: 1fr; }
+    .breakdown-grid,
+    .phases { grid-template-columns: 1fr; }
+    .scroll-hint { display: none; }
+    .finding { grid-template-columns: 40px 1fr; }
+    .finding .severity-badge { display: none; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
 </head>
 <body>
-  <div class="deck">
 
-    <!-- ═══════════════════════════════════════════════════════════
-         1. COVER
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">01 · Cover</div>
-    <section class="page page--cover" aria-label="Cover and executive summary">
-      <div class="brand-shape brand-shape--cover" aria-hidden="true"></div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Growth <span>Experts</span></div>
+  <ul class="nav-links">
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#findings">Findings</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#opportunity">Opportunity</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Let's talk</a>
+</nav>
 
-      <div class="page-inner">
-        <div class="cover-top">
-          <img class="cover-logo" src="assets/sis-global-logo-white.png" alt="SIS Global">
-          <div class="cover-week">
-            Week 11 · September 2026
-            <strong>15 – 21 Sep</strong>
-          </div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">SEO Audit — March 2026</div>
+    <h1>Your site is <em>invisible</em> to Google.</h1>
+    <div class="hero-meta">
+      <p class="hero-desc">We found 10 significant issues holding connect-mobile.co.za back from organic visibility. Here's what's broken, why it matters, and exactly how we fix it.</p>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">2</span>
+          <span class="hero-stat-label">Critical blocks</span>
         </div>
-
-        <div class="cover-main">
-          <p class="eyebrow">Growth Experts × SIS Global</p>
-          <h1>Weekly Growth<br><span>Report</span></h1>
-          <div class="rule"></div>
-          <p class="lede">
-            Campaign performance, outbound progress, and priorities
-            for the week ahead — all sourced from Smartlead.
-          </p>
+        <div>
+          <span class="hero-stat-num">5</span>
+          <span class="hero-stat-label">High priority</span>
         </div>
-
-        <div class="highlights">
-          <article class="highlight">
-            <div class="num">01</div>
-            <h3>Phase 1 complete</h3>
-            <p>All 5 campaigns have completed their sequences — 870 total emails sent across 3 weeks of active outbound.</p>
-          </article>
-          <article class="highlight">
-            <div class="num">02</div>
-            <h3>Clean send week</h3>
-            <p>44 sent · 33 opened (75%) · 1 reply (3.03%) · 0 bounces — the cleanest sending week yet.</p>
-          </article>
-          <article class="highlight">
-            <div class="num">03</div>
-            <h3>Reply rate improving</h3>
-            <p>3.03% reply rate this week vs 0.38% last week. EDUCAUSE Cold now showing meaningful engagement.</p>
-          </article>
+        <div>
+          <span class="hero-stat-num">30+</span>
+          <span class="hero-stat-label">Blog posts hidden</span>
         </div>
       </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         2. PERFORMANCE THIS WEEK
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">02 · Performance</div>
-    <section class="page" aria-label="Performance this week">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">This week</p>
-            <h2>Performance</h2>
-          </div>
-          <div class="meta">
-            Smartlead · EDUCAUSE Cold (final sends)
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="metrics">
-          <div class="metric-card">
-            <div class="label">Sent</div>
-            <div class="value">44</div>
-            <div class="hint">44 leads · EDUCAUSE Cold</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Opened</div>
-            <div class="value">33</div>
-            <div class="hint"><em>75.00%</em> open rate</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Replied</div>
-            <div class="value">1</div>
-            <div class="hint"><em>3.03%</em> · EDUCAUSE Cold</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Bounced</div>
-            <div class="value">0</div>
-            <div class="hint"><em>0.00%</em> · cleanest week yet</div>
-          </div>
-        </div>
-
-        <div class="perf-grid">
-          <div class="panel">
-            <div class="panel-label">Performance summary</div>
-            <p>
-              Volume was low this week (44 sends) as all five campaigns completed their sequences.
-              EDUCAUSE Cold produced the week's final sends via <strong>3 active mailboxes</strong>
-              (ivan@sisglobal.co · ivan.macdonald@sisglobal.co · ivan@sis-global.co).
-              Open rate hit <strong>75.00%</strong> — the strongest weekly rate to date — and the
-              week produced <strong>1 reply</strong> with zero bounces. A strong finish to Phase 1.
-            </p>
-          </div>
-          <div class="panel panel--callout">
-            <div class="panel-label">What this means</div>
-            <p>
-              Phase 1 sequences are complete. With 826 emails sent and a
-              cumulative 70%+ open rate, the infrastructure is proven.
-              The focus now shifts to Phase 2: launching new campaigns,
-              re-engaging warm opens, and getting Power Automate live
-              to close the reply-to-CRM loop.
-            </p>
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: Smartlead · EDUCAUSE Cold (final sequence sends)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         3. CAMPAIGN BREAKDOWN
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">03 · By campaign</div>
-    <section class="page" aria-label="Campaign performance breakdown">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">By campaign</p>
-            <h2>All 5 campaigns completed</h2>
-          </div>
-          <div class="meta">
-            Smartlead · Campaign totals
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="campaign-single">
-          <div class="campaign-card-large">
-            <div class="camp-name-lg">EDUCAUSE Cold — Final Sends</div>
-            <div class="camp-id-lg">Completed · 44 leads active this week · 3 mailboxes · Gmail</div>
-            <div class="camp-stats-lg">
-              <div class="camp-stat-lg">
-                <div class="v">44</div>
-                <div class="l">Sent</div>
-              </div>
-              <div class="camp-stat-lg">
-                <div class="v">33</div>
-                <div class="l">Opened</div>
-              </div>
-              <div class="camp-stat-lg">
-                <div class="v">75%</div>
-                <div class="l">Open rate</div>
-              </div>
-              <div class="camp-stat-lg">
-                <div class="v">1</div>
-                <div class="l">Reply</div>
-              </div>
-              <div class="camp-stat-lg">
-                <div class="v">0%</div>
-                <div class="l">Bounce</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="completed-banner">
-            <div class="completed-badge">All 5 Completed</div>
-            <div style="flex:1">
-              <div class="completed-text"><strong>Phase 1 sequences finished.</strong> All campaigns have sent their full sequences. 870 total emails delivered across Weeks 9–11 with a 70%+ cumulative open rate.</div>
-              <div class="completed-grid">
-                <div class="completed-pill"><div class="pill-name">EDUCAUSE Cold</div>Completed</div>
-                <div class="completed-pill"><div class="pill-name">HE US Recruitment</div>Completed</div>
-                <div class="completed-pill"><div class="pill-name">HE UK Recruitment</div>Completed</div>
-                <div class="completed-pill"><div class="pill-name">BC US Legacy</div>Completed</div>
-                <div class="completed-pill"><div class="pill-name">BC UK Legacy</div>Completed</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: Smartlead · EDUCAUSE · HE US · HE UK · BC US · BC UK</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         4. OUTBOUND PERFORMANCE PROGRESSION
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">04 · Progression</div>
-    <section class="page page--progress" aria-label="Outbound performance progression">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">Since we started</p>
-            <h2>Outbound performance progression</h2>
-          </div>
-          <div class="meta">
-            Three phases of outbound
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <table class="prog-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>
-                <span class="phase">Phase 1</span>
-                <span class="sub">Historical D365</span>
-              </th>
-              <th>
-                <span class="phase">Phase 2</span>
-                <span class="sub">Optimised D365</span>
-              </th>
-              <th class="is-now">
-                <span class="phase">Phase 3</span>
-                <span class="sub">Smartlead (cumulative)</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Delivery rate</td>
-              <td>~80%</td>
-              <td>98.36%</td>
-              <td class="is-now">~98%</td>
-            </tr>
-            <tr>
-              <td>Open rate</td>
-              <td>~28%</td>
-              <td>65.00%</td>
-              <td class="is-now">70.7%</td>
-            </tr>
-            <tr>
-              <td>Bounce rate</td>
-              <td>~13%</td>
-              <td>1.64%</td>
-              <td class="is-now">1.03%</td>
-            </tr>
-            <tr>
-              <td>Reply rate</td>
-              <td class="is-empty">—</td>
-              <td class="is-empty">—</td>
-              <td class="is-now">0.34%</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="phase-grid">
-          <article class="phase-card">
-            <div class="k">Phase 1</div>
-            <h3>Historical D365</h3>
-            <p>Existing outbound approach using designed email templates, longer-form messaging and one-off sends.</p>
-          </article>
-          <article class="phase-card">
-            <div class="k">Phase 2</div>
-            <h3>Optimised D365</h3>
-            <p>Simplified email design and copy, increased personalisation and improved contact-data quality.</p>
-          </article>
-          <article class="phase-card">
-            <div class="k">Phase 3</div>
-            <h3>Smartlead — Phase 1 Done</h3>
-            <p>870 emails sent across 3 weeks · 5 campaigns completed · cumulative open rate 70.7% · 3 replies total.</p>
-          </article>
-        </div>
-
-        <div class="prog-takeaway">
-          <strong>Milestone reached:</strong> Phase 1 Smartlead sequences are complete. Delivery held at ~98%, opens at 70.7% (vs 28% baseline), bounces dropped to 1.03%, and reply rate is growing (0.34% cumulative). The next phase: re-engage warm opens, launch new campaigns, and activate Power Automate write-back to D365.
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: D365 Customer Insights · Smartlead (Weeks 9–11)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         5. CRM AND PROSPECTING PROGRESS
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">05 · CRM &amp; prospecting</div>
-    <section class="page page--crm" aria-label="CRM and prospecting progress">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">Pipeline</p>
-            <h2>CRM and prospecting progress</h2>
-          </div>
-          <div class="meta">
-            Apollo.io → Dynamics 365
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="pipeline-row">
-          <div class="metric-card">
-            <div class="value">1,383</div>
-            <div class="title">Apollo Contacts Enriched</div>
-            <div class="hint">Running total · verified emails · ICP filters</div>
-          </div>
-          <div class="pipeline-arrow" aria-hidden="true">→</div>
-          <div class="metric-card">
-            <div class="value">1,146</div>
-            <div class="title">Uploaded to Dynamics 365</div>
-            <div class="hint">Running total · CRM-ready contacts</div>
-          </div>
-          <div class="pipeline-arrow" aria-hidden="true">→</div>
-          <div class="metric-card">
-            <div class="value">870</div>
-            <div class="title">Total Emails Sent</div>
-            <div class="hint">Across 5 campaigns · 3 weeks · Smartlead</div>
-          </div>
-          <div class="pipeline-arrow" aria-hidden="true">→</div>
-          <div class="metric-card">
-            <div class="value">3</div>
-            <div class="title">Total Replies Received</div>
-            <div class="hint">Wks 9–11 · reply rate growing · 0 positive yet</div>
-          </div>
-        </div>
-
-        <div class="crm-split">
-          <div class="crm-card">
-            <div class="card-title">Prospect Pipeline</div>
-            <div class="process-flow">
-              <div class="process-step">
-                <div class="process-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-                </div>
-                <div class="process-label">Apollo</div>
-              </div>
-              <div class="process-connector" aria-hidden="true">↓</div>
-              <div class="process-step">
-                <div class="process-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
-                </div>
-                <div class="process-label">Dynamics 365</div>
-              </div>
-              <div class="process-connector" aria-hidden="true">↓</div>
-              <div class="process-step">
-                <div class="process-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
-                </div>
-                <div class="process-label">Segmented</div>
-              </div>
-              <div class="process-connector" aria-hidden="true">↓</div>
-              <div class="process-step">
-                <div class="process-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
-                </div>
-                <div class="process-label">Smartlead</div>
-              </div>
-            </div>
-            <p class="process-note">
-              No new D365 uploads this week. Phase 1 sequences completed.
-              Power Automate write-back (replies → D365) remains the top
-              infrastructure priority for the week ahead.
-            </p>
-          </div>
-
-          <div class="crm-card">
-            <div class="card-title">Status</div>
-            <ul class="checklist">
-              <li><span class="check" aria-hidden="true">✓</span><span>All 5 campaigns completed their sequences</span></li>
-              <li><span class="check" aria-hidden="true">✓</span><span>870 total emails sent · 3 replies · 70.7% avg open rate</span></li>
-              <li><span class="check" aria-hidden="true">✓</span><span>11 mailboxes connected · 7 active · 0 disconnected</span></li>
-              <li><span class="check" aria-hidden="true">→</span><span>Power Automate reply write-back to D365 — in progress</span></li>
-              <li><span class="check" aria-hidden="true">→</span><span>Phase 2 campaigns (HE SA + re-engagement) — to plan</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: Dynamics 365 and Apollo.io</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         6. OUTBOUND
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">06 · Outbound</div>
-    <section class="page page--outbound" aria-label="Outbound this week">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Outbound engine</p>
-            <h2>Phase 1 done. Now convert opens to meetings.</h2>
-          </div>
-          <div class="meta" style="color:rgba(255,255,255,0.55)">
-            Smartlead · outbound summary
-            <span class="meta-date" style="color:rgba(255,255,255,0.85)">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="flow">
-          <div class="flow-step">
-            <div class="tool">Apollo.io</div>
-            <div class="role">ICP-filtered contacts<br>1,383 enriched</div>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <div class="tool">Dynamics 365</div>
-            <div class="role">CRM record creation<br>1,146 uploaded</div>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <div class="tool">Smartlead</div>
-            <div class="role">5 campaigns completed<br>870 sent · 3 replies</div>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <div class="tool">Power Automate</div>
-            <div class="role">Reply → D365 write-back<br>In progress</div>
-          </div>
-        </div>
-
-        <div class="domain-block">
-          <div class="domain-card">
-            <h3>What worked this week</h3>
-            <p>75% open rate on EDUCAUSE Cold final sends — the strongest open rate of any individual week. Zero bounces confirms that the list-hygiene work from Week 10 had a positive effect. The 3.03% reply rate (1 reply from 33 opens) shows engagement is building as sequences mature.</p>
-            <p>All three active mailboxes performed well — ivan@sisglobal.co led at 82.35%, followed by ivan.macdonald@sisglobal.co at 71.43% and ivan@sis-global.co at 69.23%.</p>
-          </div>
-          <div class="domain-card domain-card--note">
-            <h3>Phase 2 focus</h3>
-            <p>With Phase 1 complete, the next objective is to re-engage the ~614 leads who opened but did not reply. A targeted follow-up sequence via Smartlead, personalised to each campaign's vertical, is the highest-leverage next step.</p>
-            <p>HE SA campaign launch and Power Automate activation remain top priorities.</p>
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: Smartlead performance data · 15–21 Sep 2026</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         7. SENDING CAPACITY
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">07 · Sending capacity</div>
-    <section class="page page--infra" aria-label="Sending capacity and infrastructure">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">Infrastructure</p>
-            <h2>Sending capacity</h2>
-          </div>
-          <div class="meta">
-            Smartlead mailbox overview
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="metrics">
-          <div class="metric-card">
-            <div class="label">Connected</div>
-            <div class="value">11</div>
-            <div class="hint">Total mailboxes in Smartlead</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Active</div>
-            <div class="value">7</div>
-            <div class="hint">Sending-ready mailboxes</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Disconnected</div>
-            <div class="value">0</div>
-            <div class="hint">All mailboxes healthy</div>
-          </div>
-          <div class="metric-card">
-            <div class="label">Provider</div>
-            <div class="value" style="font-size:22px">Gmail</div>
-            <div class="hint">100% · sisglobal.co domains</div>
-          </div>
-        </div>
-
-        <div class="infra-mid">
-          <div class="infra-panel">
-            <div class="panel-label">Active mailbox breakdown</div>
-            <table class="infra-table">
-              <thead>
-                <tr>
-                  <th>Mailbox</th>
-                  <th>Sent</th>
-                  <th>Open %</th>
-                  <th>Reply %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="dom">ivan@sisglobal.co</span></td>
-                  <td class="boxes">17</td>
-                  <td>82.35%</td>
-                  <td>7.14%</td>
-                </tr>
-                <tr>
-                  <td><span class="dom">ivan.macdonald@sisglobal.co</span></td>
-                  <td class="boxes">14</td>
-                  <td>71.43%</td>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <td><span class="dom">ivan@sis-global.co</span></td>
-                  <td class="boxes">13</td>
-                  <td>69.23%</td>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <td><span class="who">4 additional mailboxes</span></td>
-                  <td class="boxes">—</td>
-                  <td>Warming</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="infra-panel">
-            <div class="panel-label">Phase 2 capacity target</div>
-            <div class="infra-formula">
-              <span class="n">7</span>
-              <span class="unit">mailboxes</span>
-              <span class="op">×</span>
-              <span class="n">~70</span>
-              <span class="unit">per/day</span>
-              <span class="op">=</span>
-              <span class="n is-result">490+</span>
-              <span class="unit">per day</span>
-            </div>
-            <div class="infra-sub">All 7 active mailboxes at full capacity. Warmed additional mailboxes add further headroom for Phase 2 campaigns.</div>
-
-            <div class="ramp">
-              <div class="ramp-head">
-                <span class="panel-label">Volume progression</span>
-              </div>
-              <div class="ramp-track">
-                <div class="ramp-step is-start"><div class="v">0</div><div class="l">Pre-launch</div></div>
-                <div class="ramp-arrow">→</div>
-                <div class="ramp-step"><div class="v">305</div><div class="l">Wk 9</div></div>
-                <div class="ramp-arrow">→</div>
-                <div class="ramp-step"><div class="v">477</div><div class="l">Wk 10</div></div>
-                <div class="ramp-arrow">→</div>
-                <div class="ramp-step"><div class="v">44</div><div class="l">Wk 11</div></div>
-                <div class="ramp-arrow">→</div>
-                <div class="ramp-step is-end"><div class="v">500+</div><div class="l">Ph 2 target</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Source: Smartlead mailbox performance · sisglobal.co · sis-global.co</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         8. PRIORITIES
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">08 · Priorities</div>
-    <section class="page" aria-label="Priorities for the week ahead">
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow eyebrow--purple">What's next</p>
-            <h2>Priorities for the week ahead</h2>
-          </div>
-          <div class="meta">
-            Week commencing 22 September 2026
-            <span class="meta-date">Phase 2 · Re-engagement + new campaigns</span>
-          </div>
-        </div>
-
-        <div class="actions">
-          <article class="action">
-            <div class="n">01</div>
-            <div>
-              <h3>Activate Power Automate write-back</h3>
-              <p>Complete the Power Automate flow to push Smartlead replies into Dynamics 365 as lead activities. This closes the loop between outbound and CRM and unlocks follow-up tracking.</p>
-            </div>
-          </article>
-          <article class="action">
-            <div class="n">02</div>
-            <div>
-              <h3>Re-engage warm opens</h3>
-              <p>~614 leads opened but did not reply across the 5 completed campaigns. Build a personalised re-engagement sequence in Smartlead, tailored per campaign vertical, to drive replies from this warm audience.</p>
-            </div>
-          </article>
-          <article class="action">
-            <div class="n">03</div>
-            <div>
-              <h3>Launch HE SA campaign</h3>
-              <p>The South African higher education recruitment campaign has been pending since Week 9. Enrich the prospect list in Apollo, upload to D365, and launch the Smartlead sequence this week.</p>
-            </div>
-          </article>
-          <article class="action">
-            <div class="n">04</div>
-            <div>
-              <h3>Review replies and qualify leads</h3>
-              <p>3 replies received to date (BC UK × 1, EDUCAUSE × 2). Review reply content, categorise by sentiment in Smartlead, and determine next steps for each — meeting request or further nurture.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> · Weekly Growth Report</span>
-          <span>Week commencing 22 September 2026</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         9. CLOSE
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="deck-label">09 · Close</div>
-    <section class="page page--close" aria-label="Closing summary and next milestone">
-      <div class="brand-shape brand-shape--close" aria-hidden="true"></div>
-
-      <div class="page-inner">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Week 11 · Summary</p>
-            <h2>Phase 1 is done. Phase 2 starts now.</h2>
-          </div>
-          <div class="meta">
-            Growth Experts × SIS Global
-            <span class="meta-date">15 – 21 September 2026</span>
-          </div>
-        </div>
-
-        <div class="close-grid">
-          <article class="close-card">
-            <div class="num">PHASE 1 DONE</div>
-            <h3>870 emails sent</h3>
-            <p>5 campaigns completed across 3 weeks. 614+ opens. 70.7% cumulative open rate. Infrastructure proven at scale.</p>
-          </article>
-          <article class="close-card">
-            <div class="num">ENGAGEMENT UP</div>
-            <h3>Reply rate climbing</h3>
-            <p>3.03% reply rate this week vs 0.38% in Week 10. Warm opens represent the highest-value audience for Phase 2.</p>
-          </article>
-          <article class="close-card">
-            <div class="num">NEXT PHASE</div>
-            <h3>Re-engage + expand</h3>
-            <p>Re-engagement sequences for 614 warm opens. HE SA launch. Power Automate to close the CRM loop.</p>
-          </article>
-        </div>
-
-        <div class="close-next">
-          <div>
-            <div class="label">Next milestone</div>
-            <div class="title">Phase 2 launch — Re-engagement sequences + HE SA</div>
-          </div>
-          <div class="detail">
-            Target week: 22 Sep 2026<br>
-            Key unlock: Power Automate live
-          </div>
-        </div>
-
-        <div class="page-footer-bar">
-          <span><strong>SIS Global</strong> × Growth Experts · Weekly Growth Report · Week 11</span>
-          <span>Confidential · for internal use only</span>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </div>
+  <div class="scroll-hint">
+    <div class="scroll-arrow">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M6 2v8M2 7l4 4 4-4" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    Scroll
+  </div>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section class="summary" id="summary">
+  <div class="section-label">Executive summary</div>
+  <h2>The core problem, plainly stated.</h2>
+
+  <div class="summary-grid reveal">
+    <div class="summary-card">
+      <div class="summary-card-label">Critical issues found</div>
+      <div class="summary-card-val red">2</div>
+      <div class="summary-card-sub">Blocking Google from crawling the site correctly</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-card-label">Blog posts not indexed</div>
+      <div class="summary-card-val amber">30+</div>
+      <div class="summary-card-sub">Articles Google likely cannot discover</div>
+    </div>
+    <div class="summary-card full">
+      <div class="summary-card-label">What this means for Connect Mobile</div>
+      <p>Connect Mobile has invested in content — over 30 blog posts — and has strong services worth ranking for. But <strong>two critical technical issues mean Google is navigating the site half-blind.</strong> The robots.txt file serves a challenge page instead of crawl instructions, and four separate versions of the site exist simultaneously with no redirects to consolidate them. Every page is being seen as duplicate content. These aren't minor tuning issues — they're foundational problems that suppress everything else. <strong>The good news: they're fixable within days.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FINDINGS -->
+<section class="findings" id="findings">
+  <div class="findings-intro reveal">
+    <div>
+      <div class="section-label">10 key findings</div>
+      <h2>What we found. What it costs you.</h2>
+    </div>
+    <p>Each finding is graded by its real-world impact on organic visibility, lead generation, and Google's ability to index and rank your pages. We've ordered them by urgency, not complexity.</p>
+  </div>
+
+  <!-- FINDING 1 -->
+  <div class="finding reveal">
+    <div class="finding-num">01</div>
+    <div class="finding-body">
+      <div class="finding-title">Robots.txt is serving a challenge page, not crawl directives</div>
+      <p class="finding-desc">When Googlebot requests robots.txt — the file that tells it how to crawl your site — it receives a JavaScript spinner page ("One moment, please…") instead. This introduces unpredictable crawl behaviour. Google may default to "allow all" after repeated failures, meaning you have zero control over what gets indexed.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Whitelist search engine bots from the firewall/CDN challenge layer. Serve a valid plain-text robots.txt. Add a sitemap directive. Estimated: 1–2 hours.</div>
+    </div>
+    <div><span class="severity-badge badge-critical">Critical</span></div>
+  </div>
+
+  <!-- FINDING 2 -->
+  <div class="finding reveal">
+    <div class="finding-num">02</div>
+    <div class="finding-body">
+      <div class="finding-title">Four duplicate versions of the site — no canonical domain</div>
+      <p class="finding-desc">http, https, www, and non-www all return a 200 OK response with no redirects between them. Google sees four identical copies of every single page on your site. Link equity is split four ways. Crawl budget is wasted. This is one of the most damaging technical SEO issues a site can have.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Choose one canonical version (https://connect-mobile.co.za). Implement 301 redirects from all others. Add HSTS header. Estimated: 2–4 hours.</div>
+    </div>
+    <div><span class="severity-badge badge-critical">Critical</span></div>
+  </div>
+
+  <!-- FINDING 3 -->
+  <div class="finding reveal">
+    <div class="finding-num">03</div>
+    <div class="finding-body">
+      <div class="finding-title">30+ blog posts are invisible to Google — sitemap excludes all of them</div>
+      <p class="finding-desc">The sitemap only lists 17 static pages. Every blog post — a significant content investment — is missing. The blog's own sitemap returns a 500 server error. Google has no efficient pathway to discover, crawl, or rank any of this content. It may as well not exist.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Repair WordPress blog sitemap (likely a plugin config issue). Create a sitemap index combining main site + blog. Submit to Google Search Console.</div>
+    </div>
+    <div><span class="severity-badge badge-high">High</span></div>
+  </div>
+
+  <!-- FINDING 4 -->
+  <div class="finding reveal">
+    <div class="finding-num">04</div>
+    <div class="finding-body">
+      <div class="finding-title">The "Contact Us" link in your main navigation returns a 404</div>
+      <p class="finding-desc">The navigation links to /contact-us, but the actual page is at /contact. Every visitor who clicks "Contact Us" lands on a dead page. For a B2B site where contact = leads, this is a direct revenue leak — and it signals to Google that the site is poorly maintained.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Update the nav link to /contact. Add a 301 redirect from /contact-us as a safety net. Estimated: 15 minutes.</div>
+    </div>
+    <div><span class="severity-badge badge-high">High</span></div>
+  </div>
+
+  <!-- FINDING 5 -->
+  <div class="finding reveal">
+    <div class="finding-num">05</div>
+    <div class="finding-body">
+      <div class="finding-title">Homepage title tag contains zero target keywords</div>
+      <p class="finding-desc">The homepage — your highest-authority page — is titled simply "Connect Mobile Communications." No mention of Bulk SMS, mobile messaging, short codes, or USSD. The title tag is the single strongest on-page ranking signal. This is the most impactful quick fix available.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Rewrite to: "Bulk SMS & Mobile Messaging Solutions | Connect Mobile". Estimated: 10 minutes.</div>
+    </div>
+    <div><span class="severity-badge badge-high">High</span></div>
+  </div>
+
+  <!-- FINDING 6 -->
+  <div class="finding reveal">
+    <div class="finding-num">06</div>
+    <div class="finding-body">
+      <div class="finding-title">Blog URLs use a broken double-path structure</div>
+      <p class="finding-desc">All blog post URLs contain /blog/blog/slug/ — a duplication caused by a WordPress permalink misconfiguration. Beyond looking wrong, this creates unnecessarily deep URLs that affect crawl efficiency. Some slugs also use underscores instead of hyphens, which Google doesn't treat as word separators.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Reconfigure WordPress permalink settings. Implement 301 redirects from old URLs. Standardise on hyphens for new content.</div>
+    </div>
+    <div><span class="severity-badge badge-high">High</span></div>
+  </div>
+
+  <!-- FINDING 7 -->
+  <div class="finding reveal">
+    <div class="finding-num">07</div>
+    <div class="finding-body">
+      <div class="finding-title">Blog and service pages are completely siloed — no internal linking</div>
+      <p class="finding-desc">The Bulk SMS service page doesn't link to any of the 5+ blog posts about bulk SMS. Blog posts about short codes don't link to the Short Codes service page. This internal linking gap means link authority isn't flowing between your content and your commercial pages — directly suppressing service page rankings.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Build a topical cluster linking strategy. Add "Related articles" to service pages. Add service CTAs to blog posts. Ongoing work.</div>
+    </div>
+    <div><span class="severity-badge badge-high">High</span></div>
+  </div>
+
+  <!-- FINDING 8 -->
+  <div class="finding reveal">
+    <div class="finding-num">08</div>
+    <div class="finding-body">
+      <div class="finding-title">Google can't verify who you are — weak E-E-A-T signals throughout</div>
+      <p class="finding-desc">Blog posts display an email address as the author, not a real person. There are no customer testimonials anywhere on the site. No FAQ schema. No structured data. In a competitive B2B space, Google's quality raters look for clear expertise and trust signals — both are largely absent here.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Add author names and bios. Add testimonials section. Implement Organisation, FAQ, and Service schema markup. Ongoing.</div>
+    </div>
+    <div><span class="severity-badge badge-medium">Medium</span></div>
+  </div>
+
+  <!-- FINDING 9 -->
+  <div class="finding reveal">
+    <div class="finding-num">09</div>
+    <div class="finding-body">
+      <div class="finding-title">The brand name is spelled four different ways — including a typo</div>
+      <p class="finding-desc">The site uses "Connect Mobile Communications", "Connect Mobile Communication", "Connect Mobile", and — in the footer copyright — "Connet IT Systems" (misspelled). Google builds a knowledge graph entity around your brand. Inconsistent naming across pages makes this harder, weakening branded search authority.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Standardise to one official brand name sitewide. Fix the footer typo. Update LinkedIn URL. Low effort, meaningful signal improvement.</div>
+    </div>
+    <div><span class="severity-badge badge-medium">Medium</span></div>
+  </div>
+
+  <!-- FINDING 10 -->
+  <div class="finding reveal">
+    <div class="finding-num">10</div>
+    <div class="finding-body">
+      <div class="finding-title">Significant content gaps vs. what competitors likely have</div>
+      <p class="finding-desc">No pricing page (only a downloadable PDF). No comparison pages targeting competitor keywords. No glossary for terms like USSD, SMPP, and RCS. No FAQ sections on service pages (missing schema markup opportunity). No individual industry landing pages. These are proven organic traffic drivers that don't currently exist on the site.</p>
+      <div class="finding-impact"><strong>Fix:</strong> Content strategy and production. Dedicated pricing page. Comparison content. Industry-specific landing pages. FAQ schema. Long-term project.</div>
+    </div>
+    <div><span class="severity-badge badge-medium">Medium</span></div>
+  </div>
+</section>
+
+<!-- BREAKDOWN -->
+<section class="breakdown" id="breakdown">
+  <div class="section-label">Severity breakdown</div>
+  <h2>Graded by real-world impact.</h2>
+
+  <div class="breakdown-grid reveal">
+    <div class="breakdown-card critical">
+      <div class="breakdown-count">2</div>
+      <div class="breakdown-type">Critical</div>
+      <ul class="breakdown-items">
+        <li>Robots.txt blocked by challenge page</li>
+        <li>4 duplicate site versions, no redirects</li>
+      </ul>
+    </div>
+    <div class="breakdown-card high">
+      <div class="breakdown-count">5</div>
+      <div class="breakdown-type">High</div>
+      <ul class="breakdown-items">
+        <li>30+ blog posts missing from sitemap</li>
+        <li>Broken Contact Us navigation link</li>
+        <li>Homepage title has no keywords</li>
+        <li>Blog URL double-path structure</li>
+        <li>Zero internal linking between blog & services</li>
+      </ul>
+    </div>
+    <div class="breakdown-card medium">
+      <div class="breakdown-count">3</div>
+      <div class="breakdown-type">Medium</div>
+      <ul class="breakdown-items">
+        <li>Weak E-E-A-T signals sitewide</li>
+        <li>Brand name inconsistency + typo</li>
+        <li>Missing content: pricing, FAQs, glossary, comparisons</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="section-label">Recommended roadmap</div>
+  <h2>Four phases. Clear priorities.</h2>
+
+  <div class="phases reveal">
+    <div class="phase">
+      <div class="phase-label">Phase 1</div>
+      <div class="phase-title">Critical fixes</div>
+      <div class="phase-time">Week 1–2</div>
+      <ul class="phase-items">
+        <li class="active">Fix robots.txt challenge page</li>
+        <li class="active">301 redirects → canonical domain</li>
+        <li class="active">Fix Contact Us nav link</li>
+        <li class="active">Fix cookie policy page title</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-label">Phase 2</div>
+      <div class="phase-title">High-impact fixes</div>
+      <div class="phase-time">Week 2–4</div>
+      <ul class="phase-items">
+        <li>Fix WordPress blog sitemap</li>
+        <li>Create sitemap index</li>
+        <li>Rewrite homepage title tag</li>
+        <li>Standardise brand name</li>
+        <li>Fix /blog/blog/ URL structure</li>
+        <li>Internal linking strategy</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-label">Phase 3</div>
+      <div class="phase-title">Authority building</div>
+      <div class="phase-time">Month 2</div>
+      <ul class="phase-items">
+        <li>Author bios on all blog posts</li>
+        <li>Testimonials section</li>
+        <li>Structured data implementation</li>
+        <li>Meta descriptions for all pages</li>
+        <li>Core Web Vitals audit</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-label">Phase 4</div>
+      <div class="phase-title">Strategic content</div>
+      <div class="phase-time">Month 2+</div>
+      <ul class="phase-items">
+        <li>Dedicated pricing page</li>
+        <li>Competitor comparison pages</li>
+        <li>Industry landing pages</li>
+        <li>Glossary / knowledge base</li>
+        <li>FAQ schema on service pages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section class="opportunity" id="opportunity">
+  <div class="section-label">The opportunity</div>
+  <h2>What this unlocks when fixed.</h2>
+
+  <div class="opp-grid reveal">
+    <div class="opp-card">
+      <h3>The quick wins available right now</h3>
+      <p>Several of these issues can be resolved within days, with measurable impact on crawlability and indexation almost immediately after.</p>
+      <ul class="opp-list">
+        <li>30+ pieces of content suddenly discoverable by Google</li>
+        <li>Link equity consolidated to one canonical domain</li>
+        <li>Homepage starts competing for core keywords</li>
+        <li>Contact form becomes fully accessible from navigation</li>
+        <li>Crawl budget stops being wasted on duplicate pages</li>
+      </ul>
+    </div>
+    <div class="opp-card dark">
+      <h3>The longer-term competitive advantage</h3>
+      <p>Connect Mobile operates in a defined niche with clear search demand. With the right foundations and content strategy, the organic channel becomes a consistent lead source.</p>
+      <ul class="opp-list">
+        <li>Rank for high-intent B2B queries: "bulk SMS South Africa", "USSD platform"</li>
+        <li>Compete on comparison and alternative keywords competitors own</li>
+        <li>Build a content moat with a properly structured blog</li>
+        <li>Earn featured snippets with FAQ schema on service pages</li>
+        <li>Grow branded search authority through entity consistency</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <h2>Ready to start fixing this?</h2>
+  <p>Phase 1 can begin immediately. Let's align on scope and get moving.</p>
+  <a href="mailto:hello@growthexperts.co.za" class="cta-btn">Get in touch →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>Prepared by <strong>Growth Experts</strong> · March 2026</span>
+  <span>Confidential — prepared for <strong>Connect Mobile</strong></span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
