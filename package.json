@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "SIS Global weekly growth report (client-facing HTML deck)",
   "scripts": {
-    "start": "serve -l tcp://0.0.0.0:${PORT:-3000} ."
+    "start": "serve -l tcp://0.0.0.0:${PORT:-3000} .",
+    "pdf": "scripts/pdf.sh"
   },
   "dependencies": {
     "serve": "^14.2.4"

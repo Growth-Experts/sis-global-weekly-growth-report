@@ -1,7 +1,4 @@
 {
   "cleanUrls": true,
-  "directoryListing": false,
-  "rewrites": [
-    { "source": "/", "destination": "/sis-global-weekly-growth-report-4-september-2026.html" }
-  ]
+  "directoryListing": false
 }
