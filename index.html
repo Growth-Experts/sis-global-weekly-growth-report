@@ -516,7 +516,14 @@
       }
     }
 
+    .pdf-download { position: fixed; top: 16px; right: 16px; z-index: 50; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--sis-primary); color: var(--sis-white); font-family: var(--font); font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 999px; box-shadow: 0 4px 14px rgba(30,80,138,0.28); }
+    .pdf-download:hover { background: var(--sis-secondary-1); }
+    .pdf-download:focus-visible { outline: 3px solid var(--sis-secondary-2); outline-offset: 2px; }
+    .pdf-download svg { width: 16px; height: 16px; }
+    @media (max-width: 640px) { .pdf-download { top: auto; bottom: 16px; } }
+
     @media print {
+      .pdf-download { display: none; }
       body { background: white; overflow: visible; }
       .deck { padding: 0; gap: 0; width: auto; }
       .deck-label { display: none; }
@@ -527,6 +534,11 @@
   </style>
 </head>
 <body>
+  <a class="pdf-download" href="pdf/sis-global-weekly-growth-report-2-october-2026.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+    Download PDF
+  </a>
+
   <div class="deck">
 
     <!-- ═══════════════════════════════════════════════════════════
