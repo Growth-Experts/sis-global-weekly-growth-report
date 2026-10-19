@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIS Global Weekly Growth Report — Week 12 · October 2026</title>
+  <!--
+    SIS GLOBAL — WEEKLY GROWTH REPORT
+    Week 12 · 12–19 October 2026
+    Source: Smartlead (12–19 Oct window)
+    Data: 475 sent · 389 opened (81.97%) · 7 replies (1.83%) · 3 bounces (0.64%)
+    2 active campaigns: BC UK October 2026 + BC US October 2026
+    Phase 2 fully live.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sis-primary: #1e508a;
+      --sis-secondary-1: #447fb3;
+      --sis-secondary-2: #55a8c4;
+      --sis-secondary-3: #584eaa;
+      --sis-purple: #1e508a;
+      --sis-purple-dark: #1e508a;
+      --sis-blue: #447fb3;
+      --sis-green: #55a8c4;
+      --sis-teal: #55a8c4;
+      --sis-text: #1a1a2e;
+      --sis-text-muted: #6b7280;
+      --sis-bg: #f0f4f8;
+      --sis-card: #ffffff;
+      --sis-border: #e2e8f0;
+      --sis-alert: #dc2626;
+      --sis-alert-bg: #fef2f2;
+      --sis-alert-border: #fecaca;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--sis-bg);
+      color: var(--sis-text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── SLIDE WRAPPER ── */
+    .slide-wrapper {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+    }
+
+    .slide-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      padding-left: 2px;
+    }
+
+    .slide {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(30,80,138,0.10);
+      position: relative;
+      background: var(--sis-card);
+    }
+
+    /* ── SLIDE 01: COVER ── */
+    .slide-cover {
+      background: linear-gradient(135deg, #1e3a6e 0%, #1e508a 45%, #2d6aad 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 6% 7%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-bg-shape {
+      position: absolute;
+      right: -4%;
+      top: -10%;
+      width: 52%;
+      height: 120%;
+      opacity: 0.12;
+    }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: auto;
+    }
+
+    .sis-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .logo-text span:last-child {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .cover-date {
+      text-align: right;
+    }
+
+    .cover-date .week-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+    }
+
+    .cover-date .date-range {
+      font-size: 13px;
+      font-weight: 700;
+      color: #55a8c4;
+      margin-top: 2px;
+    }
+
+    .cover-mid {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-top: 2%;
+    }
+
+    .cover-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #55a8c4;
+      margin-bottom: 8px;
+    }
+
+    .cover-title {
+      font-size: clamp(24px, 4.2vw, 40px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .cover-title span {
+      color: #55a8c4;
+      display: block;
+    }
+
+    .cover-rule {
+      width: 40px;
+      height: 3px;
+      background: #55a8c4;
+      border-radius: 2px;
+      margin: 10px 0;
+    }
+
+    .cover-subtitle {
+      font-size: 11.5px;
+      opacity: 0.8;
+      max-width: 55%;
+      line-height: 1.5;
+    }
+
+    .cover-highlights {
+      display: flex;
+      gap: 2%;
+      margin-top: auto;
+      padding-top: 3%;
+    }
+
+    .highlight-card {
+      flex: 1;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 10px;
+      padding: 4% 5%;
+    }
+
+    .highlight-card .num {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 4px;
+    }
+
+    .highlight-card .title {
+      font-size: clamp(10px, 1.3vw, 13px);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .highlight-card .desc {
+      font-size: clamp(8.5px, 1vw, 10.5px);
+      opacity: 0.72;
+      line-height: 1.45;
+    }
+
+    /* ── SLIDE 02: PERFORMANCE ── */
+    .slide-inner {
+      padding: 5% 6%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-header {
+      margin-bottom: 4%;
+    }
+
+    .slide-eyebrow {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sis-secondary-1);
+      margin-bottom: 3px;
+    }
+
+    .slide-title {
+      font-size: clamp(18px, 2.8vw, 27px);
+      font-weight: 800;
+      color: var(--sis-primary);
+      line-height: 1.1;
+    }
+
+    .slide-source {
+      font-size: 10px;
+      color: var(--sis-text-muted);
+      margin-top: 2px;
+    }
+
+    .metrics-row {
+      display: flex;
+      gap: 2.5%;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .metric-card {
+      flex: 1;
+      background: var(--sis-bg);
+      border-radius: 12px;
+      padding: 5% 6%;
+      display: flex;
+      flex-direction: column;
+      border: 1.5px solid var(--sis-border);
+    }
+
+    .metric-card.highlight {
+      background: var(--sis-primary);
+      color: white;
+      border-color: var(--sis-primary);
+    }
+
+    .metric-card .label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sis-text-muted);
+    }
+
+    .metric-card.highlight .label {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .metric-card .value {
+      font-size: clamp(22px, 3.8vw, 36px);
+      font-weight: 800;
+      color: var(--sis-primary);
+      line-height: 1.1;
+      margin-top: 4px;
+    }
+
+    .metric-card.highlight .value {
+      color: white;
+    }
+
+    .metric-card .sub {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--sis-secondary-2);
+      margin-top: 2px;
+    }
+
+    .metric-card.highlight .sub {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .metric-card .title {
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--sis-text);
+      line-height: 1.3;
+    }
+
+    .metric-card.highlight .title {
+      color: white;
+    }
+
+    /* ── SLIDE 03: BY CAMPAIGN ── */
+    .campaign-grid {
+      display: flex;
+      gap: 3%;
+      flex: 1;
+    }
+
+    .campaign-card {
+      flex: 1;
+      background: var(--sis-bg);
+      border-radius: 12px;
+      padding: 5% 6%;
+      border: 1.5px solid var(--sis-border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campaign-card.primary-camp {
+      background: var(--sis-primary);
+      color: white;
+      border-color: var(--sis-primary);
+      flex: 1.4;
+    }
+
+    .campaign-name {
+      font-size: clamp(11px, 1.4vw, 13.5px);
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--sis-primary);
+    }
+
+    .campaign-card.primary-camp .campaign-name {
+      color: white;
+    }
+
+    .campaign-tag {
+      display: inline-block;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .tag-active {
+      background: rgba(85,168,196,0.15);
+      color: #1e508a;
+    }
+
+    .campaign-card.primary-camp .tag-active {
+      background: rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .camp-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .camp-stat {
+      background: rgba(255,255,255,0.5);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    .campaign-card.primary-camp .camp-stat {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .camp-stat .s-val {
+      font-size: clamp(14px, 2vw, 19px);
+      font-weight: 800;
+      color: var(--sis-primary);
+      line-height: 1;
+    }
+
+    .campaign-card.primary-camp .camp-stat .s-val {
+      color: white;
+    }
+
+    .camp-stat .s-label {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--sis-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    .campaign-card.primary-camp .camp-stat .s-label {
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── ALERT CARD ── */
+    .alert-card {
+      background: var(--sis-alert-bg);
+      border: 1.5px solid var(--sis-alert-border);
+      border-radius: 12px;
+      padding: 4% 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .alert-card .alert-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sis-alert);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .alert-card .alert-text {
+      font-size: 11px;
+      color: #7f1d1d;
+      line-height: 1.45;
+    }
+
+    .progress-bar-wrap {
+      margin-top: 4px;
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(220,38,38,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: var(--sis-alert);
+    }
+
+    .progress-label {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--sis-alert);
+      margin-top: 3px;
+    }
+
+    /* ── SLIDE 04: PROGRESSION ── */
+    .progression-grid {
+      display: flex;
+      gap: 3%;
+      flex: 1;
+    }
+
+    .prog-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .prog-panel.wide {
+      flex: 1.5;
+    }
+
+    .prog-stat-card {
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      flex: 1;
+    }
+
+    .prog-stat-card .p-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+    }
+
+    .prog-stat-card .p-val {
+      font-size: clamp(18px, 2.8vw, 26px);
+      font-weight: 800;
+      color: var(--sis-primary);
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+
+    .prog-stat-card .p-sub {
+      font-size: 9.5px;
+      color: var(--sis-text-muted);
+      margin-top: 1px;
+    }
+
+    .prog-stat-card.accent {
+      background: var(--sis-primary);
+      border-color: var(--sis-primary);
+    }
+
+    .prog-stat-card.accent .p-label,
+    .prog-stat-card.accent .p-val,
+    .prog-stat-card.accent .p-sub {
+      color: white;
+    }
+
+    .prog-stat-card.accent .p-label {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .prog-stat-card.accent .p-sub {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .ramp-chart {
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      flex: 2;
+    }
+
+    .ramp-chart .rc-title {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+      margin-bottom: 10px;
+    }
+
+    .ramp-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 80px;
+    }
+
+    .ramp-bar-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .ramp-bar {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      background: var(--sis-secondary-1);
+      opacity: 0.5;
+    }
+
+    .ramp-bar.current {
+      background: var(--sis-primary);
+      opacity: 1;
+    }
+
+    .ramp-bar.target {
+      background: var(--sis-secondary-2);
+      opacity: 0.3;
+      border: 1.5px dashed var(--sis-secondary-2);
+    }
+
+    .ramp-val {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--sis-primary);
+      margin-bottom: 3px;
+    }
+
+    .ramp-label {
+      font-size: 8px;
+      color: var(--sis-text-muted);
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    /* ── SLIDE 05: CRM ── */
+    .crm-grid {
+      display: flex;
+      gap: 3%;
+      flex: 1;
+    }
+
+    .crm-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .crm-pipeline {
+      flex: 1.6;
+    }
+
+    .pipeline-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pipeline-row .metric-card {
+      padding: 3% 4%;
+    }
+
+    .pipeline-row .metric-card .title {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .pipeline-arrow {
+      font-size: 16px;
+      color: var(--sis-secondary-2);
+      flex-shrink: 0;
+    }
+
+    .crm-note {
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .crm-note .cn-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sis-text-muted);
+      margin-bottom: 6px;
+    }
+
+    .crm-note .cn-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 5px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .crm-note .cn-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sis-secondary-2);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    /* ── SLIDE 06: OUTBOUND ── */
+    .outbound-grid {
+      display: flex;
+      gap: 3%;
+      flex: 1;
+    }
+
+    .outbound-flow {
+      flex: 1.4;
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 12px;
+      padding: 5% 6%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flow-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+      margin-bottom: 10px;
+    }
+
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid var(--sis-border);
+    }
+
+    .flow-step .fs-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--sis-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .flow-step .fs-label {
+      flex: 1;
+    }
+
+    .flow-step .fs-stat {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--sis-secondary-2);
+    }
+
+    .outbound-panels {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ob-panel {
+      flex: 1;
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 12px;
+      padding: 5% 6%;
+    }
+
+    .ob-panel-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+      margin-bottom: 8px;
+    }
+
+    .ob-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .ob-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .ob-dot.green { background: #10b981; }
+    .ob-dot.blue { background: var(--sis-secondary-1); }
+    .ob-dot.purple { background: var(--sis-secondary-3); }
+    .ob-dot.orange { background: #f59e0b; }
+    .ob-dot.red { background: var(--sis-alert); }
+
+    /* ── SLIDE 07: SENDING CAPACITY ── */
+    .capacity-grid {
+      display: flex;
+      gap: 3%;
+      flex: 1;
+    }
+
+    .mailbox-list {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mailbox-row {
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mb-name {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--sis-primary);
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mb-stats {
+      display: flex;
+      gap: 12px;
+    }
+
+    .mb-stat {
+      text-align: right;
+    }
+
+    .mb-stat .ms-val {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sis-text);
+    }
+
+    .mb-stat .ms-label {
+      font-size: 8px;
+      color: var(--sis-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .mb-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      flex-shrink: 0;
+    }
+
+    .mb-dot.inactive { background: var(--sis-border); }
+
+    .capacity-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cap-stat-card {
+      flex: 1;
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cap-stat-card .cs-label {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sis-text-muted);
+    }
+
+    .cap-stat-card .cs-val {
+      font-size: clamp(18px, 2.8vw, 26px);
+      font-weight: 800;
+      color: var(--sis-primary);
+      margin-top: 2px;
+      line-height: 1;
+    }
+
+    .cap-stat-card .cs-sub {
+      font-size: 9.5px;
+      color: var(--sis-text-muted);
+      margin-top: 3px;
+    }
+
+    .cap-stat-card.alert-cap {
+      background: var(--sis-alert-bg);
+      border-color: var(--sis-alert-border);
+    }
+
+    .cap-stat-card.alert-cap .cs-val {
+      color: var(--sis-alert);
+    }
+
+    .cap-stat-card.alert-cap .cs-label {
+      color: var(--sis-alert);
+    }
+
+    /* ── SLIDE 08: PRIORITIES ── */
+    .priorities-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .priority-row {
+      display: flex;
+      gap: 2.5%;
+      flex: 1;
+    }
+
+    .priority-card {
+      flex: 1;
+      background: var(--sis-bg);
+      border: 1.5px solid var(--sis-border);
+      border-radius: 12px;
+      padding: 5% 6%;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .priority-card.urgent {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .priority-card.critical {
+      background: var(--sis-alert-bg);
+      border-color: var(--sis-alert-border);
+    }
+
+    .p-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--sis-primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .priority-card.urgent .p-num {
+      background: #d97706;
+    }
+
+    .priority-card.critical .p-num {
+      background: var(--sis-alert);
+    }
+
+    .p-content {
+      flex: 1;
+    }
+
+    .p-title {
+      font-size: clamp(11px, 1.3vw, 13px);
+      font-weight: 700;
+      color: var(--sis-primary);
+      margin-bottom: 3px;
+    }
+
+    .priority-card.urgent .p-title { color: #92400e; }
+    .priority-card.critical .p-title { color: var(--sis-alert); }
+
+    .p-desc {
+      font-size: 10.5px;
+      color: var(--sis-text-muted);
+      line-height: 1.45;
+    }
+
+    /* ── SLIDE 09: CLOSE ── */
+    .slide-close {
+      background: linear-gradient(135deg, #1e3a6e 0%, #1e508a 55%, #2d6aad 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6% 10%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .close-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #55a8c4;
+      margin-bottom: 12px;
+    }
+
+    .close-headline {
+      font-size: clamp(20px, 3.5vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .close-headline span {
+      color: #55a8c4;
+    }
+
+    .close-rule {
+      width: 40px;
+      height: 3px;
+      background: #55a8c4;
+      border-radius: 2px;
+      margin: 12px auto;
+    }
+
+    .close-sub {
+      font-size: 12px;
+      opacity: 0.75;
+      max-width: 70%;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .close-next {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 16px 32px;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .close-next .cn-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #55a8c4;
+      margin-bottom: 4px;
+    }
+
+    .close-next .cn-text {
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    /* ── PAGE PADDING ── */
+    body { padding: 24px 0 48px; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 01 · COVER
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">01 · Cover</div>
+    <div class="slide">
+      <div class="slide-cover">
+        <svg class="cover-bg-shape" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="200" cy="300" rx="220" ry="340" fill="white"/>
+          <ellipse cx="320" cy="200" rx="120" ry="180" fill="white"/>
+        </svg>
+
+        <div class="cover-top">
+          <div class="sis-logo">
+            <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="rgba(255,255,255,0.15)"/>
+              <path d="M8 22 L18 10 L28 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M12 26 L18 18 L24 26" stroke="#55a8c4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <div class="logo-text">
+              <span>SIS</span>
+              <span>GLOBAL</span>
+            </div>
+          </div>
+          <div class="cover-date">
+            <div class="week-label">Week 12 · October 2026</div>
+            <div class="date-range">12 – 19 Oct</div>
+          </div>
+        </div>
+
+        <div class="cover-mid">
+          <div class="cover-eyebrow">Growth Experts × SIS Global</div>
+          <div class="cover-title">
+            Weekly Growth
+            <span>Report</span>
+          </div>
+          <div class="cover-rule"></div>
+          <div class="cover-subtitle">Phase 2 is live. Two new markets, 475 sends, and 7 replies in the first full week.</div>
+        </div>
+
+        <div class="cover-highlights">
+          <div class="highlight-card">
+            <div class="num">01</div>
+            <div class="title">Phase 2 launched</div>
+            <div class="desc">BC UK + BC US campaigns live · 475 sent · 81.97% open rate across both.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="num">02</div>
+            <div class="title">7 replies this week</div>
+            <div class="desc">1.83% reply rate · 7× the volume of any prior week · all neutral (OOO or follow-up).</div>
+          </div>
+          <div class="highlight-card">
+            <div class="num">03</div>
+            <div class="title">Contact limit reached</div>
+            <div class="desc">1,994 / 2,000 contacts used · upgrade needed before 400–500 new leads can be added.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 02 · PERFORMANCE
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">02 · Performance</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">This Week</div>
+          <div class="slide-title">Performance</div>
+          <div class="slide-source">Smartlead · 2 active campaigns · 12–19 October 2026</div>
+        </div>
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="label">Sent</div>
+            <div class="value">475</div>
+            <div class="sub">466 leads contacted</div>
+            <div class="title">Emails delivered</div>
+          </div>
+          <div class="metric-card highlight">
+            <div class="label">Opened</div>
+            <div class="value">389</div>
+            <div class="sub">81.97% open rate</div>
+            <div class="title">Highest open rate to date</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Replied</div>
+            <div class="value">7</div>
+            <div class="sub">1.83% reply rate</div>
+            <div class="title">7× prior week volume</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Bounced</div>
+            <div class="value">3</div>
+            <div class="sub">0.64% bounce rate</div>
+            <div class="title">Clean sending health</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 03 · BY CAMPAIGN
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">03 · By Campaign</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Campaign Breakdown</div>
+          <div class="slide-title">2 Active · 5 Completed</div>
+          <div class="slide-source">Smartlead · All campaigns · 12–19 October 2026</div>
+        </div>
+        <div class="campaign-grid">
+          <div class="campaign-card primary-camp">
+            <div class="campaign-name">BC UK October 2026</div>
+            <div class="campaign-tag tag-active">Active · Lead campaign</div>
+            <div class="camp-stats">
+              <div class="camp-stat">
+                <div class="s-val">384</div>
+                <div class="s-label">Sent</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">85.87%</div>
+                <div class="s-label">Open rate</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">6</div>
+                <div class="s-label">Replies</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">1.86%</div>
+                <div class="s-label">Reply rate</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">375</div>
+                <div class="s-label">Leads</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">0.80%</div>
+                <div class="s-label">Bounce</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="campaign-card">
+            <div class="campaign-name">BC US October 2026</div>
+            <div class="campaign-tag tag-active">Active · US market</div>
+            <div class="camp-stats">
+              <div class="camp-stat">
+                <div class="s-val">91</div>
+                <div class="s-label">Sent</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">65.93%</div>
+                <div class="s-label">Open rate</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">1</div>
+                <div class="s-label">Reply</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">1.67%</div>
+                <div class="s-label">Reply rate</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">91</div>
+                <div class="s-label">Leads</div>
+              </div>
+              <div class="camp-stat">
+                <div class="s-val">0.00%</div>
+                <div class="s-label">Bounce</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="flex: 0.8; display: flex; flex-direction: column; gap: 8px;">
+            <div style="background: var(--sis-bg); border: 1.5px solid var(--sis-border); border-radius: 12px; padding: 5% 6%; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--sis-text-muted); margin-bottom: 6px;">Pending</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--sis-primary); margin-bottom: 4px;">Dugga Campaign</div>
+              <div style="font-size: 10.5px; color: var(--sis-text-muted); line-height: 1.45;">Awaiting client approval before going live. 400–500 new contacts ready to load.</div>
+            </div>
+            <div style="background: var(--sis-bg); border: 1.5px solid var(--sis-border); border-radius: 12px; padding: 5% 6%; flex: 1; display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--sis-text-muted); margin-bottom: 6px;">Phase 1 Archive</div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--sis-primary); margin-bottom: 4px;">5 Campaigns Complete</div>
+              <div style="font-size: 10.5px; color: var(--sis-text-muted); line-height: 1.45;">EDUCAUSE + 4 others · 870 total sends · Phase 1 closed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 04 · PROGRESSION
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">04 · Progression</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Cumulative Progress</div>
+          <div class="slide-title">Outbound Progression</div>
+          <div class="slide-source">All weeks · Smartlead · Wk9 through Wk12</div>
+        </div>
+        <div class="progression-grid">
+          <div class="prog-panel">
+            <div class="prog-stat-card accent">
+              <div class="p-label">Total Sent (All Time)</div>
+              <div class="p-val">1,345</div>
+              <div class="p-sub">Wk9–Wk12 · Phase 1 + Phase 2</div>
+            </div>
+            <div class="prog-stat-card">
+              <div class="p-label">Cumulative Open Rate</div>
+              <div class="p-val">82.3%</div>
+              <div class="p-sub">Strongest week: Wk12 (81.97%)</div>
+            </div>
+            <div class="prog-stat-card">
+              <div class="p-label">Cumulative Reply Rate</div>
+              <div class="p-val">0.89%</div>
+              <div class="p-sub">7 replies this week · 11 total</div>
+            </div>
+          </div>
+          <div class="prog-panel wide">
+            <div class="ramp-chart" style="flex: 1;">
+              <div class="rc-title">Weekly Send Volume · Wk9 → Wk12</div>
+              <div class="ramp-bars">
+                <div class="ramp-bar-col">
+                  <div class="ramp-val">305</div>
+                  <div class="ramp-bar" style="height: 52%;"></div>
+                  <div class="ramp-label">Wk9</div>
+                </div>
+                <div class="ramp-bar-col">
+                  <div class="ramp-val">477</div>
+                  <div class="ramp-bar" style="height: 80%;"></div>
+                  <div class="ramp-label">Wk10</div>
+                </div>
+                <div class="ramp-bar-col">
+                  <div class="ramp-val">44</div>
+                  <div class="ramp-bar" style="height: 8%;"></div>
+                  <div class="ramp-label">Wk11</div>
+                </div>
+                <div class="ramp-bar current" style="height: 100%; width: 100%; border-radius: 4px 4px 0 0; position: relative; align-self: flex-end;">
+                  <div class="ramp-bar-col" style="height: 100%; justify-content: flex-start;">
+                    <div class="ramp-val" style="color: white; padding-top: 4px;">475</div>
+                  </div>
+                </div>
+                <div class="ramp-bar-col">
+                  <div class="ramp-val" style="color: var(--sis-secondary-2);">500+</div>
+                  <div class="ramp-bar target" style="height: 88%;"></div>
+                  <div class="ramp-label">Wk13</div>
+                </div>
+              </div>
+            </div>
+            <div class="prog-stat-card" style="flex: 0; padding: 12px 14px;">
+              <div style="font-size: 10.5px; line-height: 1.5; color: var(--sis-text-muted);">
+                <strong style="color: var(--sis-primary);">Phase 2 milestone:</strong> 1,345 emails sent across 12 weeks · 14 campaigns launched · reply rate climbing week-on-week.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 05 · CRM
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">05 · CRM & Data</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Apollo → D365 → Smartlead</div>
+          <div class="slide-title">CRM & Pipeline</div>
+          <div class="slide-source">Running totals · No new uploads this week</div>
+        </div>
+        <div class="crm-grid">
+          <div class="crm-panel crm-pipeline">
+            <div class="pipeline-row">
+              <div class="metric-card" style="flex: 1;">
+                <div class="label">Apollo</div>
+                <div class="value" style="font-size: clamp(18px,2.6vw,28px);">1,383</div>
+                <div class="title">Contacts enriched</div>
+              </div>
+              <div class="pipeline-arrow">→</div>
+              <div class="metric-card" style="flex: 1;">
+                <div class="label">D365</div>
+                <div class="value" style="font-size: clamp(18px,2.6vw,28px);">1,146</div>
+                <div class="title">Uploaded to CRM</div>
+              </div>
+              <div class="pipeline-arrow">→</div>
+              <div class="metric-card highlight" style="flex: 1;">
+                <div class="label">Smartlead</div>
+                <div class="value" style="font-size: clamp(18px,2.6vw,28px);">1,345</div>
+                <div class="title">Total emails sent</div>
+              </div>
+            </div>
+            <div class="metric-card" style="margin-top: 8px;">
+              <div class="label">Total Replies Received</div>
+              <div class="value" style="font-size: clamp(18px,2.6vw,28px);">11</div>
+              <div class="sub">7 this week · 4 prior weeks · 0 qualified yet</div>
+            </div>
+          </div>
+          <div class="crm-panel">
+            <div class="crm-note" style="flex: 1;">
+              <div class="cn-title">This Week</div>
+              <div class="cn-item"><div class="cn-dot"></div><span>No new Apollo uploads or D365 syncs this week</span></div>
+              <div class="cn-item"><div class="cn-dot"></div><span>400–500 new contacts sourced and ready to load</span></div>
+              <div class="cn-item"><div class="cn-dot"></div><span>Contact storage at 1,994/2,000 — upgrade required first</span></div>
+              <div class="cn-item"><div class="cn-dot"></div><span>Power Automate write-back still pending configuration</span></div>
+            </div>
+            <div class="crm-note">
+              <div class="cn-title">Next Actions</div>
+              <div class="cn-item"><div class="cn-dot" style="background: var(--sis-alert);"></div><span><strong>Upgrade Smartlead plan</strong> before adding new contacts</span></div>
+              <div class="cn-item"><div class="cn-dot"></div><span>Load 400–500 new contacts once upgraded</span></div>
+              <div class="cn-item"><div class="cn-dot"></div><span>Qualify the 7 new replies — categorise and follow up</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 06 · OUTBOUND
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">06 · Outbound</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Phase 2 · Live</div>
+          <div class="slide-title">Outbound Engine</div>
+          <div class="slide-source">BC UK + BC US active · Dugga pending · Follow-up sequences building</div>
+        </div>
+        <div class="outbound-grid">
+          <div class="outbound-flow">
+            <div class="flow-title">Outbound Flow · Active State</div>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="fs-icon">1</div>
+                <div class="fs-label">Apollo enrichment</div>
+                <div class="fs-stat">1,383 total</div>
+              </div>
+              <div class="flow-step">
+                <div class="fs-icon">2</div>
+                <div class="fs-label">D365 CRM upload</div>
+                <div class="fs-stat">1,146 total</div>
+              </div>
+              <div class="flow-step">
+                <div class="fs-icon">3</div>
+                <div class="fs-label">Smartlead send</div>
+                <div class="fs-stat">475 this week</div>
+              </div>
+              <div class="flow-step">
+                <div class="fs-icon">4</div>
+                <div class="fs-label">Replies received</div>
+                <div class="fs-stat">7 this week</div>
+              </div>
+              <div class="flow-step" style="opacity: 0.5;">
+                <div class="fs-icon" style="background: var(--sis-border); color: var(--sis-text-muted);">5</div>
+                <div class="fs-label" style="color: var(--sis-text-muted);">Qualified meeting booked</div>
+                <div class="fs-stat" style="color: var(--sis-text-muted);">Pending</div>
+              </div>
+            </div>
+          </div>
+          <div class="outbound-panels">
+            <div class="ob-panel">
+              <div class="ob-panel-title">What's working</div>
+              <div class="ob-item"><div class="ob-dot green"></div><span>BC UK open rate at 85.87% — strongest campaign yet</span></div>
+              <div class="ob-item"><div class="ob-dot green"></div><span>michael@sisglobal.uk driving 86.40% open rate at scale (128 sent)</span></div>
+              <div class="ob-item"><div class="ob-dot green"></div><span>Reply volume 7× previous best — momentum building</span></div>
+            </div>
+            <div class="ob-panel">
+              <div class="ob-panel-title">Phase 2 focus</div>
+              <div class="ob-item"><div class="ob-dot orange"></div><span>Upgrade Smartlead to load Dugga + new contacts</span></div>
+              <div class="ob-item"><div class="ob-dot blue"></div><span>Qualify 7 replies — convert neutrals to meetings</span></div>
+              <div class="ob-item"><div class="ob-dot purple"></div><span>Launch Dugga campaign once approved + contacts loaded</span></div>
+              <div class="ob-item"><div class="ob-dot blue"></div><span>Scale BC US — early signals positive at 65.93% open</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 07 · SENDING CAPACITY
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">07 · Sending Capacity</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Mailbox Health</div>
+          <div class="slide-title">Sending Capacity</div>
+          <div class="slide-source">11 mailboxes connected · 7 active · Gmail only</div>
+        </div>
+        <div class="capacity-grid">
+          <div class="mailbox-list">
+            <div class="mailbox-row">
+              <div class="mb-dot"></div>
+              <div class="mb-name">michael@sisglobal.uk</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">128</div><div class="ms-label">Sent</div></div>
+                <div class="mb-stat"><div class="ms-val">86.40%</div><div class="ms-label">Open</div></div>
+                <div class="mb-stat"><div class="ms-val">0.93%</div><div class="ms-label">Reply</div></div>
+              </div>
+            </div>
+            <div class="mailbox-row">
+              <div class="mb-dot"></div>
+              <div class="mb-name">ivan@sisglobal.co</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">23</div><div class="ms-label">Sent</div></div>
+                <div class="mb-stat"><div class="ms-val">69.57%</div><div class="ms-label">Open</div></div>
+                <div class="mb-stat"><div class="ms-val">6.25%</div><div class="ms-label">Reply</div></div>
+              </div>
+            </div>
+            <div class="mailbox-row">
+              <div class="mb-dot"></div>
+              <div class="mb-name">ivan@sis-global.co</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">23</div><div class="ms-label">Sent</div></div>
+                <div class="mb-stat"><div class="ms-val">73.91%</div><div class="ms-label">Open</div></div>
+                <div class="mb-stat"><div class="ms-val">0.00%</div><div class="ms-label">Reply</div></div>
+              </div>
+            </div>
+            <div class="mailbox-row">
+              <div class="mb-dot"></div>
+              <div class="mb-name">ivan.macdonald@sisglobal.co</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">23</div><div class="ms-label">Sent</div></div>
+                <div class="mb-stat"><div class="ms-val">65.22%</div><div class="ms-label">Open</div></div>
+                <div class="mb-stat"><div class="ms-val">0.00%</div><div class="ms-label">Reply</div></div>
+              </div>
+            </div>
+            <div class="mailbox-row">
+              <div class="mb-dot"></div>
+              <div class="mb-name">ivan.macdonald@sis-global.co</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">22</div><div class="ms-label">Sent</div></div>
+                <div class="mb-stat"><div class="ms-val">54.55%</div><div class="ms-label">Open</div></div>
+                <div class="mb-stat"><div class="ms-val">0.00%</div><div class="ms-label">Reply</div></div>
+              </div>
+            </div>
+            <div class="mailbox-row" style="opacity: 0.45;">
+              <div class="mb-dot inactive"></div>
+              <div class="mb-name">4 mailboxes · not active this week</div>
+              <div class="mb-stats">
+                <div class="mb-stat"><div class="ms-val">0</div><div class="ms-label">Sent</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="capacity-right">
+            <div class="cap-stat-card">
+              <div class="cs-label">Monthly Sends Used</div>
+              <div class="cs-val">1,592 / 6,000</div>
+              <div class="cs-sub">26.5% of monthly allowance · headroom to scale</div>
+            </div>
+            <div class="cap-stat-card alert-cap">
+              <div class="cs-label">⚠ Contact Storage</div>
+              <div class="cs-val">1,994 / 2,000</div>
+              <div class="cs-sub">At limit — upgrade required before new contacts can be added</div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-track">
+                  <div class="progress-bar-fill" style="width: 99.7%;"></div>
+                </div>
+                <div class="progress-label">99.7% used</div>
+              </div>
+            </div>
+            <div class="cap-stat-card">
+              <div class="cs-label">Plan Renews</div>
+              <div class="cs-val" style="font-size: 16px;">19 Oct 2026</div>
+              <div class="cs-sub">Basic Plan · Candice Jenkinson account · upgrade now to unlock</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 08 · PRIORITIES
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">08 · Priorities</div>
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-header">
+          <div class="slide-eyebrow">Week 13 · Actions</div>
+          <div class="slide-title">Priorities This Week</div>
+          <div class="slide-source">Owners TBD · Target week: 19–26 October 2026</div>
+        </div>
+        <div class="priorities-grid">
+          <div class="priority-row">
+            <div class="priority-card critical">
+              <div class="p-num">1</div>
+              <div class="p-content">
+                <div class="p-title">Upgrade Smartlead plan immediately</div>
+                <div class="p-desc">Contact storage is at 1,994/2,000. Cannot add any new leads until upgraded. Plan renews 19 Oct — act today to avoid blocking the pipeline.</div>
+              </div>
+            </div>
+            <div class="priority-card">
+              <div class="p-num">2</div>
+              <div class="p-content">
+                <div class="p-title">Qualify and respond to 7 new replies</div>
+                <div class="p-desc">All 7 categorised as neutral (OOO or unclassified). Review each thread, identify any warm intent, and send follow-up where appropriate.</div>
+              </div>
+            </div>
+          </div>
+          <div class="priority-row">
+            <div class="priority-card urgent">
+              <div class="p-num">3</div>
+              <div class="p-content">
+                <div class="p-title">Approve and launch Dugga campaign</div>
+                <div class="p-desc">Campaign is built and pending client sign-off. 400–500 contacts are ready. Once Smartlead is upgraded and approval received, load contacts and go live.</div>
+              </div>
+            </div>
+            <div class="priority-card">
+              <div class="p-num">4</div>
+              <div class="p-content">
+                <div class="p-title">Configure Power Automate reply write-back</div>
+                <div class="p-desc">Replies are not yet flowing back to D365. This blocks pipeline visibility. Set up the Power Automate flow to sync Smartlead replies to CRM.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 09 · CLOSE
+  ══════════════════════════════════════════ -->
+  <div class="slide-wrapper">
+    <div class="slide-label">09 · Close</div>
+    <div class="slide">
+      <div class="slide-close">
+        <div class="close-eyebrow">Week 12 · 12–19 October 2026</div>
+        <div class="close-headline">
+          Phase 2 is live.<br>
+          <span>Now convert opens to meetings.</span>
+        </div>
+        <div class="close-rule"></div>
+        <div class="close-sub">
+          475 sent · 81.97% open · 7 replies · 1,345 total emails across the engagement. The pipeline is active — the next milestone is a qualified meeting booked from outbound.
+        </div>
+        <div class="close-next">
+          <div class="cn-label">Next Milestone</div>
+          <div class="cn-text">Upgrade plan · load Dugga · qualify replies · book first outbound meeting. Target: week of 26 Oct 2026.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
